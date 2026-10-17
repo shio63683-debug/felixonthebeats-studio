@@ -1,0 +1,200 @@
+{
+  "studio": [
+    {
+      "version": "2.6.0",
+      "date": "17.10.2026",
+      "items": [
+        "Neues Aussehen: Original, Samsung und Owner haben jetzt jeweils ein eigenes Design und einen eigenen Aufbau.",
+        "Gemeinsame Datenbank für alle Bots der App: Fällt ein Bot aus (Bann, kein Internet), übernimmt ein anderer Gruppen, Flammen, Sperren und Nutzer und macht nahtlos weiter.",
+        "Neue, einfachere Anleitung.",
+        "Startseite zeigt die Zahlen aller Bots auf einen Blick (Nutzer, Flammen, Sperren).",
+        "Fehlt ein Felix-Dienst oder gibt es ein Update, geht es direkt in den Felixstore – ohne Umweg über GitHub.",
+        "„Was ist neu?“ direkt in der App."
+      ]
+    },
+    {
+      "version": "2.5.0",
+      "date": "17.10.2026",
+      "items": [
+        "Anmeldung wie bei Google: WhatsApp-Nummer eingeben, der Felix-Bot schickt einen Code.",
+        "Mehrere Felix-Konten pro Handy; bei einer Neuinstallation fragt die App, welches sie nutzen soll.",
+        "Backups wahlweise in die Felix-Cloud sichern und von dort laden."
+      ]
+    },
+    {
+      "version": "2.4.0",
+      "date": "17.10.2026",
+      "items": [
+        "Automatische Verbindung zum FelixServer ohne Code.",
+        "Neue Befehle per /cmd update vom Hauptbot."
+      ]
+    },
+    {
+      "version": "2.3.0",
+      "date": "16.10.2026",
+      "items": [
+        "Bei Wartung oder Ausfall bleibt man angemeldet; die Bots starten danach von selbst wieder.",
+        "Gesperrte Konten sehen „Du wurdest gebannt“.",
+        "Eigene Symbole für alle Felix-Apps."
+      ]
+    }
+  ],
+  "store": [
+    {
+      "version": "1.8.3",
+      "date": "17.10.2026",
+      "items": [
+        "Doppelte App-Kacheln auf der Startseite entfernt."
+      ]
+    },
+    {
+      "version": "1.8.2",
+      "date": "17.10.2026",
+      "items": [
+        "Der FelixServer-Creator-Katalog wird beim Start und danach regelmässig auf freigegebene Apps und Updates geprüft.",
+        "Neue FelixServer-APK-Versionen erscheinen in „Updates verfügbar“ und lassen sich direkt im Store installieren.",
+        "Felix YouTube ist im öffentlichen App-Katalog und als installierbare APK enthalten."
+      ]
+    },
+    {
+      "version": "1.8.1",
+      "date": "17.10.2026",
+      "items": [
+        "Creator-Freigaben gelten jetzt nur für das ausdrücklich ausgewählte Felix-Konto, nicht für alle Konten derselben Telefonnummer.",
+        "Alte Telefonnummer-Freigaben werden auf ein einzelnes Felix-Konto migriert.",
+        "Das Profilmenü lässt sich auch mit vielen Konten vollständig scrollen."
+      ]
+    },
+    {
+      "version": "1.8.0",
+      "date": "17.10.2026",
+      "items": [
+        "Suchen wie bei Google Play: eigenes Suchfeld mit letzten Suchen, Vorschlägen und Beliebtem.",
+        "„Über diese App“ auf einer eigenen Seite mit allen Infos.",
+        "„Was ist neu?“ zeigt jetzt für jede App nur ihre eigenen Neuerungen.",
+        "FelixServer und FelixAccountManager lassen sich ohne Anmeldung installieren.",
+        "Andere Felix-Apps führen direkt auf ihre Store-Seite, wenn ein Dienst fehlt oder ein Update ansteht."
+      ]
+    },
+    {
+      "version": "1.7.0",
+      "date": "17.10.2026",
+      "items": [
+        "Profilmenü wie bei Google Play: Konten wechseln, „Weiteres Konto hinzufügen“, Konten verwalten.",
+        "Felix-Cloud direkt aus dem Profilmenü."
+      ]
+    },
+    {
+      "version": "1.6.0",
+      "date": "17.10.2026",
+      "items": [
+        "Neuer Aufbau wie Google Play: Suchleiste, Spiele/Apps/Suchen, Für dich, Topcharts, Kategorien.",
+        "Profilbild und „Über mich“ auf dem FelixServer."
+      ]
+    }
+  ],
+  "server": [
+    {
+      "version": "1.5.1",
+      "date": "17.10.2026",
+      "items": [
+        "Fehlende Dienste und Updates öffnen den Felixstore statt GitHub.",
+        "„Was ist neu?“ in der App."
+      ]
+    },
+    {
+      "version": "1.5.0",
+      "date": "17.10.2026",
+      "items": ["Anmeldung per WhatsApp-Code und Felix-Cloud werden durchgereicht."]
+    },
+    {
+      "version": "1.2.0",
+      "date": "17.10.2026",
+      "items": ["Verbindet sich automatisch mit dem FelixServer – kein Code mehr nötig."]
+    }
+  ],
+  "accountManager": [
+    {
+      "version": "2.1.0",
+      "date": "17.10.2026",
+      "items": [
+        "Fehlende Dienste führen in den Felixstore.",
+        "„Was ist neu?“ in der App."
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "17.10.2026",
+      "items": [
+        "Mehrere Felix-Konten wie bei Google, jede App merkt sich ihr Konto.",
+        "Felix-Cloud: Fotos, Videos, Chats, Dateien und Backups auf dem Felix-PC oder nur lokal speichern."
+      ]
+    }
+  ],
+  "browser": [
+    {
+      "version": "1.4.0",
+      "date": "17.10.2026",
+      "items": [
+        "Fehlende Dienste und Updates öffnen den Felixstore statt GitHub.",
+        "„Was ist neu?“ im Menü."
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "17.10.2026",
+      "items": ["Anmeldung per WhatsApp-Code und Kontoauswahl."]
+    },
+    {
+      "version": "1.2.0",
+      "date": "17.10.2026",
+      "items": [
+        "Tab-Vorschaubilder der zuletzt besuchten Seite; Tabs bleiben nach einem Neustart.",
+        "Felix-Shield blockiert fremde Weiterleitungen und Werbung.",
+        "Neue Seite owner.org (nur mit Admin-Passwort)."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "17.10.2026",
+      "items": ["Brave-ähnlicher Aufbau mit Tabs, Verlauf, Werbeblocker, Tor/Proxy und felixserver.org."]
+    }
+  ],
+  "youtube": [
+    {
+      "version": "1.0.0",
+      "date": "17.10.2026",
+      "items": [
+        "Eigene Start-, Such- und Trendansicht ohne YouTube-Anmeldung.",
+        "YouTube-Videos werden über die offizielle YouTube-Webseite wiedergegeben.",
+        "YouTube-Links lassen sich in lokalen Wiedergabelisten speichern."
+      ]
+    }
+  ],
+  "remote": [
+    {
+      "version": "1.1.9",
+      "date": "17.10.2026",
+      "items": ["Fehlende Dienste öffnen den Felixstore statt GitHub.", "„Was ist neu?“ im Menü."]
+    },
+    {
+      "version": "1.1.8",
+      "date": "17.10.2026",
+      "items": ["Anmeldung per WhatsApp-Code und Kontoauswahl."]
+    }
+  ],
+  "linuxStudio": [
+    {
+      "version": "2.6.0",
+      "date": "17.10.2026",
+      "items": [
+        "Felix-Konto: Anmeldung per WhatsApp-Code oder Passwort, Konto erstellen, mehrere Konten.",
+        "Felix-Cloud: Dateien hochladen, herunterladen, Backups in die Cloud.",
+        "Statistik aller Bots: Nutzer, Flammen-Bestenliste, Sperren, Gruppen.",
+        "FelixServer-Status direkt im Programm.",
+        "Neue Befehle per /cmd update werden automatisch übernommen.",
+        "Gemeinsame Datenbank aller Bots: Ersatz-Bots machen Flammen und Gruppen nahtlos weiter."
+      ]
+    }
+  ]
+}
