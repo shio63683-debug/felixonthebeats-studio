@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generatedAt": "2026-10-17T15:12:39.708Z",
+  "generatedAt": "2026-10-17T15:31:45.703Z",
   "apps": [
     {
       "id": "studio-standard",
@@ -70,10 +70,10 @@
       "packageName": "com.felixonthebeats.appstore",
       "genre": "Apps & Spiele",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-      "apkSize": 9837973,
-      "sha256": "0ec0f9173c891a840498182112d9e5c2745badc3de1612a122a57f6b0fc6dfbe",
-      "versionCode": 33,
-      "versionName": "1.8.8",
+      "apkSize": 9838914,
+      "sha256": "91d2a6bca7bd5249c6aed45f28449f9980fe29ebc7d979d10a1117b7cb5d542a",
+      "versionCode": 34,
+      "versionName": "1.8.9",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/icon.png",
       "screenshots": [],
       "downloadManifestKey": "store"
@@ -171,10 +171,10 @@
       "category": "service",
       "genre": "Felix-Dienste",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/current.apk",
-      "apkSize": 9227407,
-      "sha256": "1acb58b60baa371261cd11e8aa688640d342e9cae6c808c626e4a63b14928721",
-      "versionCode": 12,
-      "versionName": "1.5.2",
+      "apkSize": 9227404,
+      "sha256": "b96112eec2ad83ce7de32bf95e719155795d70d5be46133cf43cc568e3f84a82",
+      "versionCode": 13,
+      "versionName": "1.5.3",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/icon.png",
       "screenshots": [],
       "downloadManifestKey": "server"
