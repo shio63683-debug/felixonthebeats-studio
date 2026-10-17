@@ -9,10 +9,10 @@
   "packageName": "com.felixonthebeats.appstore",
   "genre": "Apps & Spiele",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-  "apkSize": 9805823,
-  "sha256": "9a80031011f524e478d9e975947004e34d57ce8bc9dac30e6e01803135498c08",
-  "versionCode": 29,
-  "versionName": "1.8.4",
+  "apkSize": 9805815,
+  "sha256": "56ab91d68948c18968f614dddc146bb5284710d95313260418db81a197c25df3",
+  "versionCode": 30,
+  "versionName": "1.8.5",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/icon.png",
   "screenshots": []
 }
