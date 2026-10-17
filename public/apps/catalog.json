@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generatedAt": "2026-10-17T13:09:38.500Z",
+  "generatedAt": "2026-10-17T14:04:06.313Z",
   "apps": [
     {
       "id": "studio-standard",
@@ -13,12 +13,13 @@
       "packageName": "com.felixonthebeats.studio",
       "genre": "Tools",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
-      "apkSize": 29070428,
-      "sha256": "b7ab67cc8c809ea5c1b1ddcb42e73bfff2ba874cd28cb2c53cd12419f4924b64",
+      "apkSize": 30020844,
+      "sha256": "ae79497548bafa7137121f0c28bb042efa3b65fe46ac4595ac155a3fdbe9994c",
       "versionCode": 34,
       "versionName": "2.6.1",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/icon.png",
-      "screenshots": []
+      "screenshots": [],
+      "downloadManifestKey": "standard"
     },
     {
       "id": "studio-samsung",
@@ -31,12 +32,13 @@
       "packageName": "com.felixonthebeats.studio.samsung",
       "genre": "Tools",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
-      "apkSize": 29051208,
-      "sha256": "d5b683f07bdd0f5bc8ee270c6b6e0ca5e4daec6d49646bffc2b378e084d61784",
+      "apkSize": 30001792,
+      "sha256": "5326dcd914f60d27efa6aea96c13b92535e1e84e1741e58a049b8c9aaf67521d",
       "versionCode": 34,
       "versionName": "2.6.1",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/icon.png",
-      "screenshots": []
+      "screenshots": [],
+      "downloadManifestKey": "samsung"
     },
     {
       "id": "remote-felixbot",
@@ -54,7 +56,8 @@
       "versionCode": 12,
       "versionName": "1.2.0",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/icon.png",
-      "screenshots": []
+      "screenshots": [],
+      "downloadManifestKey": "remote"
     },
     {
       "id": "felix-app-store",
@@ -67,12 +70,13 @@
       "packageName": "com.felixonthebeats.appstore",
       "genre": "Apps & Spiele",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-      "apkSize": 9805815,
-      "sha256": "56ab91d68948c18968f614dddc146bb5284710d95313260418db81a197c25df3",
-      "versionCode": 30,
-      "versionName": "1.8.5",
+      "apkSize": 9834241,
+      "sha256": "32e57defbb567e7fba9e641e44d8da2c0cfc82368014aaca769e832325c389e2",
+      "versionCode": 32,
+      "versionName": "1.8.7",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/icon.png",
-      "screenshots": []
+      "screenshots": [],
+      "downloadManifestKey": "store"
     },
     {
       "id": "flc-web",
@@ -90,7 +94,8 @@
       "versionCode": 8,
       "versionName": "1.4.1",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/icon.png",
-      "screenshots": []
+      "screenshots": [],
+      "downloadManifestKey": "browser"
     },
     {
       "id": "felix-youtube",
@@ -103,12 +108,36 @@
       "packageName": "com.felixonthebeats.youtube",
       "genre": "Musik & Video",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/current.apk",
-      "apkSize": 9016201,
-      "sha256": "2bdb40108a0e2b2024b92ff2ccd01a5fdbb245123d8c276dcf508b1ef14054d8",
-      "versionCode": 2,
-      "versionName": "1.0.1",
+      "apkSize": 9026958,
+      "sha256": "d14134b8e31346bcbb2cbc1afd023e50cd4c7ab80c9ed716d93769abcdffc8c4",
+      "versionCode": 4,
+      "versionName": "1.0.3",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/icon.png",
-      "screenshots": []
+      "screenshots": [],
+      "downloadManifestKey": "youtube"
+    },
+    {
+      "id": "felix-creator-upload",
+      "name": "Felix Creator Upload",
+      "description": "Eigene Android-Apps und Spiele als Creator einreichen. Uploads bis 5 GB werden erst nach Freigabe des FelixStore-Owners veröffentlicht.",
+      "publisher": "FELIXONTHEBEATS",
+      "developerAccount": "shio63683-debug",
+      "developerUrl": "https://github.com/shio63683-debug",
+      "platform": "Android",
+      "packageName": "com.felixonthebeats.creatorupload",
+      "genre": "Entwickler",
+      "category": "service",
+      "downloadManifestKey": "creatorUpload",
+      "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-creator-upload/current.apk",
+      "minAndroid": 23,
+      "minRamMb": 2048,
+      "nativeAbi": "any",
+      "versionCode": 1,
+      "versionName": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-creator-upload/icon.png",
+      "screenshots": [],
+      "apkSize": 8976966,
+      "sha256": "8ff3ed09794895496e84bc46f230489683f80187012f2470f0dd6e44ded9f8ac"
     },
     {
       "id": "felix-account-manager",
@@ -122,12 +151,13 @@
       "category": "service",
       "genre": "Felix-Dienste",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
-      "apkSize": 9348754,
-      "sha256": "c28536839063f05a5e78b1c2cae0fb69ddbea9c9151d62aafb378d7825a65192",
-      "versionCode": 10,
-      "versionName": "2.1.1",
+      "apkSize": 9348842,
+      "sha256": "d48789a4d320601abb317e73a26f10c2dbeebad348a4488047690fd07a6bfad3",
+      "versionCode": 11,
+      "versionName": "2.1.2",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/icon.png",
-      "screenshots": []
+      "screenshots": [],
+      "downloadManifestKey": "accountManager"
     },
     {
       "id": "felix-server",
@@ -146,7 +176,8 @@
       "versionCode": 12,
       "versionName": "1.5.2",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/icon.png",
-      "screenshots": []
+      "screenshots": [],
+      "downloadManifestKey": "server"
     }
   ]
 }
