@@ -1,0 +1,18 @@
+{
+  "id": "felix-app-store",
+  "name": "FelixAppStore",
+  "description": "Der Felix Store selbst. Hier siehst du verfügbare Store-Updates und kannst die aktuelle Version installieren.",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.appstore",
+  "genre": "Apps & Spiele",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
+  "apkSize": 9805775,
+  "sha256": "3a77f3cfa1f858df0369d9dbd57b49ab83e19716fd9ebe8ad8bc3a15e64cec7f",
+  "versionCode": 28,
+  "versionName": "1.8.3",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/icon.png",
+  "screenshots": []
+}
