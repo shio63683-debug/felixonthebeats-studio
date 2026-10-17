@@ -9,10 +9,10 @@
   "packageName": "com.felixonthebeats.youtube",
   "genre": "Musik & Video",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/current.apk",
-  "apkSize": 9016196,
-  "sha256": "97af5db2d32bdec61efc8ed5fc2e89082f86eb5995fd7ba0893a65aa4ae998ce",
-  "versionCode": 1,
-  "versionName": "1.0.0",
+  "apkSize": 9016201,
+  "sha256": "2bdb40108a0e2b2024b92ff2ccd01a5fdbb245123d8c276dcf508b1ef14054d8",
+  "versionCode": 2,
+  "versionName": "1.0.1",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/icon.png",
   "screenshots": []
 }
