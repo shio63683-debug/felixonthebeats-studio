@@ -13,11 +13,11 @@
   "minAndroid": 23,
   "minRamMb": 1024,
   "nativeAbi": "any",
-  "versionCode": 3,
-  "versionName": "1.1.1",
+  "versionCode": 4,
+  "versionName": "1.2.0",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-cloud-gallery/icon.png",
   "screenshots": [],
   "downloadManifestKey": "cloudGallery",
-  "apkSize": 9069697,
-  "sha256": "bd20def46b3aa2ee7a5cd8c960590048d9cb3e0f423c129c15f2d1008e632073"
+  "apkSize": 9102474,
+  "sha256": "fe449fc5882ce87edd2b1f5faa020f02579210e7906ac7418232639a88e95521"
 }
