@@ -19,8 +19,15 @@ public/apps/<app-id>/
 `catalog.json` and `version.json` are generated from the APKs and app metadata
 by `android/sync-store-public.js`. APK updates replace `current.apk` and update
 the version, SHA-256, size, icon, and screenshot references in the catalog.
-Only free/public apps are synchronized here. The publish check requires five
-real screenshots for every public app.
+This directory contains free, publicly downloadable apps. `--require-screenshots`
+enforces five distinct real screenshots per public app; the explicit
+`--allow-missing-screenshots` release option leaves screenshot references empty
+when no real captures are available.
+
+Creator submissions use the Felix Creator Upload app and are stored separately
+on FelixServer under `data/felixserver/creator-program/apps/`. They appear in
+the live Store catalog only after an owner approves them; they are not copied
+into this public directory.
 
 Paid app packages must never be copied here. On the Felix PC they belong under
 `data/felixserver/store-paid/apps/<app-id>/`, with the APK, `app.json`,
