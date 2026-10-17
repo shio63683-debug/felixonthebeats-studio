@@ -1,0 +1,18 @@
+{
+  "id": "studio-standard",
+  "name": "FELIXONTHEBEATS STUDIO",
+  "description": "Die App für Bot-Verwaltung, Gruppenfunktionen und Fernsteuerung auf kompatiblen Android-Geräten.",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.studio",
+  "genre": "Tools",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
+  "apkSize": 29021800,
+  "sha256": "b08775c18cf2347c619ccf2c96eec00324e4d6112921639967a48ade6d9cab5a",
+  "versionCode": 33,
+  "versionName": "2.6.0",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/icon.png",
+  "screenshots": []
+}
