@@ -1,0 +1,80 @@
+{
+  "versionCode": 33,
+  "versionName": "2.6.0",
+  "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
+  "sha256": "b08775c18cf2347c619ccf2c96eec00324e4d6112921639967a48ade6d9cab5a",
+  "size": 29021800,
+  "notes": "Version 2.6.0\n\n• Jede App passt sich jetzt automatisch an die System-Schriftgröße an – kein Verstellen in den Handy-Einstellungen mehr nötig, alles bleibt scrollbar und bedienbar.\n• Oben in der Mitte der grüne Schriftzug FELIXONTHEBEATS: Antippen öffnet ein Feld mit allen Felix-Apps (nicht mehr GitHub); jede öffnet ihre Seite im Felixstore.\n• Fehlt ein Felix-Dienst oder gibt es ein Update, geht es direkt in den Felixstore statt zu GitHub – und nach der Store-Installation von selbst weiter zur richtigen App.\n• Felixstore: Suche wie bei Google Play (eigenes Suchfeld, letzte Suchen, Vorschläge, Beliebtes) und „Über diese App“ auf einer eigenen Seite.\n• „Was ist neu?“ in jeder App – mit den eigenen Neuerungen der App.\n• FelixServer und FelixAccountManager lassen sich ohne Anmeldung installieren.",
+  "samsung": {
+    "versionCode": 33,
+    "versionName": "2.6.0",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
+    "sha256": "81aad1aa25ed870bf04e3e5296eb5e1e3e194e08f6fc1a047429dfe06cb768e8",
+    "size": 29002584,
+    "notes": "Version 2.6.0\n\n• Jede App passt sich jetzt automatisch an die System-Schriftgröße an – kein Verstellen in den Handy-Einstellungen mehr nötig, alles bleibt scrollbar und bedienbar.\n• Oben in der Mitte der grüne Schriftzug FELIXONTHEBEATS: Antippen öffnet ein Feld mit allen Felix-Apps (nicht mehr GitHub); jede öffnet ihre Seite im Felixstore.\n• Fehlt ein Felix-Dienst oder gibt es ein Update, geht es direkt in den Felixstore statt zu GitHub – und nach der Store-Installation von selbst weiter zur richtigen App.\n• Felixstore: Suche wie bei Google Play (eigenes Suchfeld, letzte Suchen, Vorschläge, Beliebtes) und „Über diese App“ auf einer eigenen Seite.\n• „Was ist neu?“ in jeder App – mit den eigenen Neuerungen der App.\n• FelixServer und FelixAccountManager lassen sich ohne Anmeldung installieren."
+  },
+  "remote": {
+    "versionCode": 11,
+    "versionName": "1.1.9",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/current.apk",
+    "sha256": "c5eb99c4062f0d588b2cb2add940e8aec0ac207752ee84910dd07b77c251e9b2",
+    "size": 17633947
+  },
+  "store": {
+    "versionCode": 28,
+    "versionName": "1.8.3",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
+    "sha256": "3a77f3cfa1f858df0369d9dbd57b49ab83e19716fd9ebe8ad8bc3a15e64cec7f",
+    "size": 9805775
+  },
+  "server": {
+    "versionCode": 11,
+    "versionName": "1.5.1",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/current.apk",
+    "sha256": "9354477ef7465f8d42212de8d662e401640a0fc509753767a064a7a9b32de2a4",
+    "size": 9227402
+  },
+  "accountManager": {
+    "versionCode": 9,
+    "versionName": "2.1.0",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
+    "sha256": "455b44cd5c165505be38adb8bc2d8aebc646c55d2662b0fcfb8fa3fc78197e57",
+    "size": 9475949
+  },
+  "browser": {
+    "versionCode": 7,
+    "versionName": "1.4.0",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/current.apk",
+    "sha256": "9027d9c575f582305fe4222d0be15dcc2ab3a849ecc50c0e3184659b79970484",
+    "size": 9795521
+  },
+  "desktop": {
+    "version": "2.6.0",
+    "files": {
+      "linux": {
+        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.0/FelixStudioDesktop-linux",
+        "sha256": "6dade6e6ab6432c460ad70782aa29efed71cf6f41d1f3fdb2358520d66263291"
+      },
+      "deb": {
+        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.0/FelixStudioDesktop-linuxmint.deb",
+        "sha256": "ecb81523d1016740e101d8cb3cefd097cce7857457ac6a2a3ea5cbb02ac00298"
+      },
+      "windows": {
+        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.0/FelixStudioDesktop.exe",
+        "sha256": "7014c7bc6cd918cefda6b7c489d6da9538be359d72af344336e64a6c8c3f6acd"
+      }
+    }
+  },
+  "linuxStudio": {
+    "version": "2.6.0",
+    "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.0/FelixOnTheBeatsStudio-linuxmint.deb",
+    "sha256": "499bb9bb3879418a7da94583a33b3ede196b63f6f77d1e931ebe30c0474d8574"
+  },
+  "youtube": {
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/current.apk",
+    "sha256": "97af5db2d32bdec61efc8ed5fc2e89082f86eb5995fd7ba0893a65aa4ae998ce",
+    "size": 9016196
+  }
+}
