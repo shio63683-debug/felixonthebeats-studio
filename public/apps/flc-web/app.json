@@ -14,5 +14,6 @@
   "versionCode": 8,
   "versionName": "1.4.1",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/icon.png",
-  "screenshots": []
+  "screenshots": [],
+  "downloadManifestKey": "browser"
 }
