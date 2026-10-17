@@ -1,0 +1,19 @@
+{
+  "id": "felix-account-manager",
+  "name": "FelixAccountManager",
+  "description": "Verwaltet dein Felix-Konto für alle Felix-Apps: einmal anmelden, überall angemeldet. Pflichtdienst für Studio, Felixstore, Remote und FLC-WEB.",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.accountmanager",
+  "category": "service",
+  "genre": "Felix-Dienste",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
+  "apkSize": 9475949,
+  "sha256": "455b44cd5c165505be38adb8bc2d8aebc646c55d2662b0fcfb8fa3fc78197e57",
+  "versionCode": 9,
+  "versionName": "2.1.0",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/icon.png",
+  "screenshots": []
+}
