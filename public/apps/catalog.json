@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generatedAt": "2026-10-17T15:31:45.703Z",
+  "generatedAt": "2026-10-17T15:52:31.480Z",
   "apps": [
     {
       "id": "studio-standard",
@@ -70,10 +70,10 @@
       "packageName": "com.felixonthebeats.appstore",
       "genre": "Apps & Spiele",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-      "apkSize": 9838914,
-      "sha256": "91d2a6bca7bd5249c6aed45f28449f9980fe29ebc7d979d10a1117b7cb5d542a",
-      "versionCode": 34,
-      "versionName": "1.8.9",
+      "apkSize": 9838952,
+      "sha256": "948e53c1bbf64bff8bdf503a0909f575d6ff31a83fd37e3ea24e5f1208138d88",
+      "versionCode": 35,
+      "versionName": "1.9.0",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/icon.png",
       "screenshots": [],
       "downloadManifestKey": "store"
@@ -194,13 +194,13 @@
       "minAndroid": 23,
       "minRamMb": 1024,
       "nativeAbi": "any",
-      "versionCode": 2,
-      "versionName": "1.1.0",
+      "versionCode": 3,
+      "versionName": "1.1.1",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-cloud-gallery/icon.png",
       "screenshots": [],
       "downloadManifestKey": "cloudGallery",
-      "apkSize": 9069667,
-      "sha256": "98cb8b3741fad84ead354b630e23b33bc0676fed45af802c2ec060f9e65a5575"
+      "apkSize": 9069697,
+      "sha256": "bd20def46b3aa2ee7a5cd8c960590048d9cb3e0f423c129c15f2d1008e632073"
     }
   ]
 }
