@@ -1,0 +1,23 @@
+{
+  "id": "felix-creator-upload",
+  "name": "Felix Creator Upload",
+  "description": "Eigene Android-Apps und Spiele als Creator einreichen. Uploads bis 5 GB werden erst nach Freigabe des FelixStore-Owners veröffentlicht.",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.creatorupload",
+  "genre": "Entwickler",
+  "category": "service",
+  "downloadManifestKey": "creatorUpload",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-creator-upload/current.apk",
+  "minAndroid": 23,
+  "minRamMb": 2048,
+  "nativeAbi": "any",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-creator-upload/icon.png",
+  "screenshots": [],
+  "apkSize": 8976966,
+  "sha256": "8ff3ed09794895496e84bc46f230489683f80187012f2470f0dd6e44ded9f8ac"
+}
