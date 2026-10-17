@@ -9,10 +9,10 @@
   "packageName": "com.felixonthebeats.browser",
   "genre": "Browser",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/current.apk",
-  "apkSize": 9795521,
-  "sha256": "9027d9c575f582305fe4222d0be15dcc2ab3a849ecc50c0e3184659b79970484",
-  "versionCode": 7,
-  "versionName": "1.4.0",
+  "apkSize": 9795522,
+  "sha256": "e9800a6f2451193bf422078fc05be00cb74e3a406f2c14371fdc2e518fc66ed3",
+  "versionCode": 8,
+  "versionName": "1.4.1",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/icon.png",
   "screenshots": []
 }
