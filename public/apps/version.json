@@ -4,14 +4,14 @@
   "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
   "sha256": "b7ab67cc8c809ea5c1b1ddcb42e73bfff2ba874cd28cb2c53cd12419f4924b64",
   "size": 29070428,
-  "notes": "Neue FelixStore-Ausgabe: alle kostenlosen Android-Apps neu paketiert und Katalog aktualisiert",
+  "notes": "Alle kostenlosen Felix-Apps als APK-Anhänge und Store-Katalog",
   "samsung": {
     "versionCode": 34,
     "versionName": "2.6.1",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
     "sha256": "d5b683f07bdd0f5bc8ee270c6b6e0ca5e4daec6d49646bffc2b378e084d61784",
     "size": 29051208,
-    "notes": "Neue FelixStore-Ausgabe: alle kostenlosen Android-Apps neu paketiert und Katalog aktualisiert"
+    "notes": "Alle kostenlosen Felix-Apps als APK-Anhänge und Store-Katalog"
   },
   "remote": {
     "versionCode": 12,
