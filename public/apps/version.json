@@ -4,14 +4,14 @@
   "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
   "sha256": "ae79497548bafa7137121f0c28bb042efa3b65fe46ac4595ac155a3fdbe9994c",
   "size": 30020844,
-  "notes": "Felix YouTube 1.2.0 (eigener Client mit Suche, Shorts und Player), Felix Cloud Galerie 1.1.0 (Viewer und automatische Sicherung), Felixstore 1.8.8, FelixAccountManager 2.1.3",
+  "notes": "FelixServer 1.5.3 (Store-Owner, 2FA und Creator-Upload gehen wieder), Felixstore 1.8.9 (Benachrichtigungen für Updates und Owner-Nachrichten)",
   "samsung": {
     "versionCode": 34,
     "versionName": "2.6.1",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
     "sha256": "5326dcd914f60d27efa6aea96c13b92535e1e84e1741e58a049b8c9aaf67521d",
     "size": 30001792,
-    "notes": "Felix YouTube 1.2.0 (eigener Client mit Suche, Shorts und Player), Felix Cloud Galerie 1.1.0 (Viewer und automatische Sicherung), Felixstore 1.8.8, FelixAccountManager 2.1.3"
+    "notes": "FelixServer 1.5.3 (Store-Owner, 2FA und Creator-Upload gehen wieder), Felixstore 1.8.9 (Benachrichtigungen für Updates und Owner-Nachrichten)"
   },
   "remote": {
     "versionCode": 12,
@@ -21,18 +21,18 @@
     "size": 17650333
   },
   "store": {
-    "versionCode": 33,
-    "versionName": "1.8.8",
+    "versionCode": 34,
+    "versionName": "1.8.9",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-    "sha256": "0ec0f9173c891a840498182112d9e5c2745badc3de1612a122a57f6b0fc6dfbe",
-    "size": 9837973
+    "sha256": "91d2a6bca7bd5249c6aed45f28449f9980fe29ebc7d979d10a1117b7cb5d542a",
+    "size": 9838914
   },
   "server": {
-    "versionCode": 12,
-    "versionName": "1.5.2",
+    "versionCode": 13,
+    "versionName": "1.5.3",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/current.apk",
-    "sha256": "1acb58b60baa371261cd11e8aa688640d342e9cae6c808c626e4a63b14928721",
-    "size": 9227407
+    "sha256": "b96112eec2ad83ce7de32bf95e719155795d70d5be46133cf43cc568e3f84a82",
+    "size": 9227404
   },
   "accountManager": {
     "versionCode": 12,
