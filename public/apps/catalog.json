@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generatedAt": "2026-10-17T12:10:15.592Z",
+  "generatedAt": "2026-10-17T12:39:42.790Z",
   "apps": [
     {
       "id": "studio-standard",
@@ -67,10 +67,10 @@
       "packageName": "com.felixonthebeats.appstore",
       "genre": "Apps & Spiele",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-      "apkSize": 9805775,
-      "sha256": "3a77f3cfa1f858df0369d9dbd57b49ab83e19716fd9ebe8ad8bc3a15e64cec7f",
-      "versionCode": 28,
-      "versionName": "1.8.3",
+      "apkSize": 9805823,
+      "sha256": "9a80031011f524e478d9e975947004e34d57ce8bc9dac30e6e01803135498c08",
+      "versionCode": 29,
+      "versionName": "1.8.4",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/icon.png",
       "screenshots": []
     },
