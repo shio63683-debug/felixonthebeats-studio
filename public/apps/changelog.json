@@ -48,6 +48,21 @@
   ],
   "store": [
     {
+      "version": "1.8.7",
+      "date": "2026-10-17",
+      "items": [
+        "YouTube-Store-Icon wird nach der Icon-Synchronisierung mit dem Store-APK neu gebündelt.",
+        "Creator-Upload-App und Gerätekompatibilität für Android-Version, RAM und Prozessorarchitektur."
+      ]
+    },
+    {
+      "version": "1.8.6",
+      "date": "17.10.2026",
+      "items": [
+        "Felix YouTube hat jetzt ein eigenes App-Symbol in der Store-Liste."
+      ]
+    },
+    {
       "version": "1.8.5",
       "date": "17.10.2026",
       "items": [
@@ -147,6 +162,13 @@
   ],
   "accountManager": [
     {
+      "version": "2.1.2",
+      "date": "2026-10-17",
+      "items": [
+        "Felix YouTube und Felix Creator Upload können sich sicher mit FelixAccountManager verbinden."
+      ]
+    },
+    {
       "version": "2.1.1",
       "date": "17.10.2026",
       "items": [
@@ -208,6 +230,20 @@
   ],
   "youtube": [
     {
+      "version": "1.0.3",
+      "date": "2026-10-17",
+      "items": [
+        "FelixAccountManager vertraut der YouTube-App jetzt für Kontoanmeldung und FelixServer-Zugriff."
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "17.10.2026",
+      "items": [
+        "Neues Felix-YouTube-App-Symbol für Startbildschirm, App-Übersicht und FelixStore."
+      ]
+    },
+    {
       "version": "1.0.1",
       "date": "17.10.2026",
       "items": [
@@ -221,6 +257,16 @@
         "Eigene Start-, Such- und Trendansicht ohne YouTube-Anmeldung.",
         "YouTube-Videos werden über die offizielle YouTube-Webseite wiedergegeben.",
         "YouTube-Links lassen sich in lokalen Wiedergabelisten speichern."
+      ]
+    }
+  ],
+  "creatorUpload": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-17",
+      "items": [
+        "Creator-Konten können Apps und Spiele mit Angaben zu Android-Version, RAM und Prozessorarchitektur zur Owner-Freigabe einreichen.",
+        "APK-Uploads bis zu 5 GB mit Prüfsumme und FelixServer-Zwischenspeicherung."
       ]
     }
   ],
