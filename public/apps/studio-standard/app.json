@@ -9,10 +9,10 @@
   "packageName": "com.felixonthebeats.studio",
   "genre": "Tools",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
-  "apkSize": 29021800,
-  "sha256": "b08775c18cf2347c619ccf2c96eec00324e4d6112921639967a48ade6d9cab5a",
-  "versionCode": 33,
-  "versionName": "2.6.0",
+  "apkSize": 29070428,
+  "sha256": "b7ab67cc8c809ea5c1b1ddcb42e73bfff2ba874cd28cb2c53cd12419f4924b64",
+  "versionCode": 34,
+  "versionName": "2.6.1",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/icon.png",
   "screenshots": []
 }
