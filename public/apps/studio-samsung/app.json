@@ -1,0 +1,18 @@
+{
+  "id": "studio-samsung",
+  "name": "FelixOnTheBeatsSamsung.studio",
+  "description": "Samsung-exklusive Ausgabe mit eigenem Design und Startanimation.",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android · Samsung",
+  "packageName": "com.felixonthebeats.studio.samsung",
+  "genre": "Tools",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
+  "apkSize": 29002584,
+  "sha256": "81aad1aa25ed870bf04e3e5296eb5e1e3e194e08f6fc1a047429dfe06cb768e8",
+  "versionCode": 33,
+  "versionName": "2.6.0",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/icon.png",
+  "screenshots": []
+}
