@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generatedAt": "2026-10-17T15:52:31.480Z",
+  "generatedAt": "2026-10-17T19:28:19.023Z",
   "apps": [
     {
       "id": "studio-standard",
@@ -89,10 +89,10 @@
       "packageName": "com.felixonthebeats.browser",
       "genre": "Browser",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/current.apk",
-      "apkSize": 9795522,
-      "sha256": "e9800a6f2451193bf422078fc05be00cb74e3a406f2c14371fdc2e518fc66ed3",
-      "versionCode": 8,
-      "versionName": "1.4.1",
+      "apkSize": 9795525,
+      "sha256": "d675e7e55ea0b2c818082e0c9f8d75506cc8e45fd5f609ac16e69c7670adcd48",
+      "versionCode": 9,
+      "versionName": "1.5.0",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/icon.png",
       "screenshots": [],
       "downloadManifestKey": "browser"
@@ -108,10 +108,10 @@
       "packageName": "com.felixonthebeats.youtube",
       "genre": "Musik & Video",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/current.apk",
-      "apkSize": 9375262,
-      "sha256": "4d119111134a00faf377c6c0470ca2e5f5002e7eb7febfae57da5e5cb56daa51",
-      "versionCode": 6,
-      "versionName": "1.2.0",
+      "apkSize": 9158084,
+      "sha256": "001e46d702f54fa892a694819a92b02418786f64873e74797e0f11a375c8337a",
+      "versionCode": 7,
+      "versionName": "1.3.0",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/icon.png",
       "screenshots": [],
       "downloadManifestKey": "youtube"
