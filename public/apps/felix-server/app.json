@@ -10,10 +10,10 @@
   "category": "service",
   "genre": "Felix-Dienste",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/current.apk",
-  "apkSize": 9227402,
-  "sha256": "9354477ef7465f8d42212de8d662e401640a0fc509753767a064a7a9b32de2a4",
-  "versionCode": 11,
-  "versionName": "1.5.1",
+  "apkSize": 9227407,
+  "sha256": "1acb58b60baa371261cd11e8aa688640d342e9cae6c808c626e4a63b14928721",
+  "versionCode": 12,
+  "versionName": "1.5.2",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/icon.png",
   "screenshots": []
 }
