@@ -237,6 +237,14 @@
   ],
   "browser": [
     {
+      "version": "1.5.0",
+      "date": "17.10.2026",
+      "items": [
+        "owner.org: Anmeldung nur noch mit dem Admin-Passwort – ohne Felix-Konto und ohne WhatsApp-Code.",
+        "Jede Anmeldung bei owner.org meldet der Hauptbot dem Betreiber per WhatsApp."
+      ]
+    },
+    {
       "version": "1.4.1",
       "date": "17.10.2026",
       "items": [
@@ -276,6 +284,16 @@
     }
   ],
   "youtube": [
+    {
+      "version": "1.3.0",
+      "date": "17.10.2026",
+      "items": [
+        "Behoben: Auf manchen Handys lief nur der Ton und das Bild blieb schwarz. Der Player läuft jetzt in einem eigenen Bildschirm.",
+        "Neu: Vollbild – über den Knopf „⛶ Vollbild“, den Vollbild-Knopf im Player oder einfach das Handy quer halten.",
+        "Neu: „Kompatibler Player“ als Ausweich-Modus, falls das Bild trotzdem schwarz bleibt.",
+        "Der Bildschirm bleibt beim Abspielen an; beim Verlassen der App pausiert das Video."
+      ]
+    },
     {
       "version": "1.2.0",
       "date": "17.10.2026",
