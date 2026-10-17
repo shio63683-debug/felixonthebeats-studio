@@ -1,0 +1,18 @@
+{
+  "id": "felix-youtube",
+  "name": "Felix YouTube",
+  "description": "Eigenständige YouTube-App mit eigener Suche, Trendseite und lokalen Link-Playlists. Ansehen und Suchen nutzen offizielle YouTube-Seiten; Videos werden nicht heruntergeladen.",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.youtube",
+  "genre": "Musik & Video",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/current.apk",
+  "apkSize": 9016196,
+  "sha256": "97af5db2d32bdec61efc8ed5fc2e89082f86eb5995fd7ba0893a65aa4ae998ce",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/icon.png",
+  "screenshots": []
+}
