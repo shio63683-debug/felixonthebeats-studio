@@ -2,16 +2,16 @@
   "versionCode": 34,
   "versionName": "2.6.1",
   "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
-  "sha256": "b7ab67cc8c809ea5c1b1ddcb42e73bfff2ba874cd28cb2c53cd12419f4924b64",
-  "size": 29070428,
-  "notes": "Alle kostenlosen Felix-Apps als APK-Anhänge und Store-Katalog",
+  "sha256": "ae79497548bafa7137121f0c28bb042efa3b65fe46ac4595ac155a3fdbe9994c",
+  "size": 30020844,
+  "notes": "Creator Upload, YouTube login and Store icon updates",
   "samsung": {
     "versionCode": 34,
     "versionName": "2.6.1",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
-    "sha256": "d5b683f07bdd0f5bc8ee270c6b6e0ca5e4daec6d49646bffc2b378e084d61784",
-    "size": 29051208,
-    "notes": "Alle kostenlosen Felix-Apps als APK-Anhänge und Store-Katalog"
+    "sha256": "5326dcd914f60d27efa6aea96c13b92535e1e84e1741e58a049b8c9aaf67521d",
+    "size": 30001792,
+    "notes": "Creator Upload, YouTube login and Store icon updates"
   },
   "remote": {
     "versionCode": 12,
@@ -21,11 +21,11 @@
     "size": 17650333
   },
   "store": {
-    "versionCode": 30,
-    "versionName": "1.8.5",
+    "versionCode": 32,
+    "versionName": "1.8.7",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-    "sha256": "56ab91d68948c18968f614dddc146bb5284710d95313260418db81a197c25df3",
-    "size": 9805815
+    "sha256": "32e57defbb567e7fba9e641e44d8da2c0cfc82368014aaca769e832325c389e2",
+    "size": 9834241
   },
   "server": {
     "versionCode": 12,
@@ -35,11 +35,11 @@
     "size": 9227407
   },
   "accountManager": {
-    "versionCode": 10,
-    "versionName": "2.1.1",
+    "versionCode": 11,
+    "versionName": "2.1.2",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
-    "sha256": "c28536839063f05a5e78b1c2cae0fb69ddbea9c9151d62aafb378d7825a65192",
-    "size": 9348754
+    "sha256": "d48789a4d320601abb317e73a26f10c2dbeebad348a4488047690fd07a6bfad3",
+    "size": 9348842
   },
   "browser": {
     "versionCode": 8,
@@ -49,11 +49,18 @@
     "size": 9795522
   },
   "youtube": {
-    "versionCode": 2,
-    "versionName": "1.0.1",
+    "versionCode": 4,
+    "versionName": "1.0.3",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/current.apk",
-    "sha256": "2bdb40108a0e2b2024b92ff2ccd01a5fdbb245123d8c276dcf508b1ef14054d8",
-    "size": 9016201
+    "sha256": "d14134b8e31346bcbb2cbc1afd023e50cd4c7ab80c9ed716d93769abcdffc8c4",
+    "size": 9026958
+  },
+  "creatorUpload": {
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-creator-upload/current.apk",
+    "sha256": "8ff3ed09794895496e84bc46f230489683f80187012f2470f0dd6e44ded9f8ac",
+    "size": 8976966
   },
   "desktop": {
     "version": "2.6.1",
