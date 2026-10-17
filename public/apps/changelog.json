@@ -48,6 +48,15 @@
   ],
   "store": [
     {
+      "version": "1.9.1",
+      "date": "17.10.2026",
+      "items": [
+        "Icons und Screenshots kommen jetzt auch für neue Apps direkt aus dem Store-Ordner bzw. vom FelixServer – nicht nur für mitgelieferte.",
+        "Creator-Apps lassen sich wieder herunterladen (kleinere Stücke).",
+        "Der Creator-Bereich führt jetzt zur App „Felix Creator Upload“ und zeigt die Nachrichten vom Store-Owner."
+      ]
+    },
+    {
       "version": "1.9.0",
       "date": "17.10.2026",
       "items": [
@@ -159,6 +168,13 @@
   ],
   "server": [
     {
+      "version": "1.5.4",
+      "date": "17.10.2026",
+      "items": [
+        "Neue Felix-Funktionen (Creator-Bilder, WhoChat, Flammen) brauchen kein FelixServer-Update mehr."
+      ]
+    },
+    {
       "version": "1.5.3",
       "date": "17.10.2026",
       "items": [
@@ -196,6 +212,13 @@
     }
   ],
   "accountManager": [
+    {
+      "version": "2.1.4",
+      "date": "17.10.2026",
+      "items": [
+        "Neue Felix-Funktionen (Creator-Bilder, WhoChat, Flammen) brauchen kein AccountManager-Update mehr."
+      ]
+    },
     {
       "version": "2.1.3",
       "date": "17.10.2026",
@@ -285,6 +308,13 @@
   ],
   "youtube": [
     {
+      "version": "1.3.1",
+      "date": "17.10.2026",
+      "items": [
+        "Beim Zurückkehren in die App bleiben Suche und Listen erhalten."
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "17.10.2026",
       "items": [
@@ -348,6 +378,16 @@
   ],
   "cloudGallery": [
     {
+      "version": "1.2.0",
+      "date": "17.10.2026",
+      "items": [
+        "Musik als Album: nacheinander abspielen, voriges/nächstes Stück, Wiederholen (alle/eins), Zufall und ±10 Sekunden.",
+        "Videos ebenso: voriges/nächstes Video, Wiederholen und Zufall.",
+        "Fotos durchwischen; Zoomen mit zwei Fingern oder Doppeltippen.",
+        "Beim Zurückkehren in die App bleibt alles erhalten."
+      ]
+    },
+    {
       "version": "1.1.1",
       "date": "17.10.2026",
       "items": [
@@ -377,6 +417,18 @@
     }
   ],
   "creatorUpload": [
+    {
+      "version": "1.1.0",
+      "date": "17.10.2026",
+      "items": [
+        "Behoben: APKs ließen sich vom Handy nicht hochladen (zu große Stücke für die Verbindung zwischen den Apps). Jetzt geht es in kleinen Stücken.",
+        "APK wählen – Name, Icon, Version, Paketname, Android-Version und Prozessor-Architektur werden automatisch erkannt.",
+        "Echte Screenshots aus der Galerie statt HTTPS-Links; Icon und Screenshots sind freiwillig.",
+        "Alles wird als Entwurf gespeichert: Wer die App verlässt und zurückkommt, findet alle Angaben wieder.",
+        "Der Upload läuft im Hintergrund weiter, mit Fortschritt in der Benachrichtigung (APKs bis 5 GB).",
+        "Neu: „Meine Apps“ mit Status (wartet auf Freigabe, im Felixstore, Update wartet)."
+      ]
+    },
     {
       "version": "1.0.0",
       "date": "2026-10-17",
