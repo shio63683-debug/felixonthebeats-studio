@@ -21,11 +21,11 @@
     "size": 17633947
   },
   "store": {
-    "versionCode": 28,
-    "versionName": "1.8.3",
+    "versionCode": 29,
+    "versionName": "1.8.4",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-    "sha256": "3a77f3cfa1f858df0369d9dbd57b49ab83e19716fd9ebe8ad8bc3a15e64cec7f",
-    "size": 9805775
+    "sha256": "9a80031011f524e478d9e975947004e34d57ce8bc9dac30e6e01803135498c08",
+    "size": 9805823
   },
   "server": {
     "versionCode": 11,
