@@ -1,0 +1,23 @@
+{
+  "id": "felix-cloud-gallery",
+  "name": "Felix Cloud Galerie",
+  "description": "Deine Felix-Cloud als Galerie: Fotos mit Zoom, Videos, Musik-Player, PDF- und Textanzeige, APK-Installation und gedrehte Bildkopien – alles in der App. Automatische Sicherung von Fotos, Videos und Musik vom Handy (auf Wunsch nur im WLAN).",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.cloudgallery",
+  "category": "app",
+  "genre": "Fotos & Videos",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-cloud-gallery/current.apk",
+  "minAndroid": 23,
+  "minRamMb": 1024,
+  "nativeAbi": "any",
+  "versionCode": 2,
+  "versionName": "1.1.0",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-cloud-gallery/icon.png",
+  "screenshots": [],
+  "downloadManifestKey": "cloudGallery",
+  "apkSize": 9069667,
+  "sha256": "98cb8b3741fad84ead354b630e23b33bc0676fed45af802c2ec060f9e65a5575"
+}
