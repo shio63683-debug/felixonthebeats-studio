@@ -15,5 +15,6 @@
   "versionCode": 12,
   "versionName": "1.5.2",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/icon.png",
-  "screenshots": []
+  "screenshots": [],
+  "downloadManifestKey": "server"
 }
