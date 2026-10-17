@@ -10,10 +10,11 @@
   "category": "service",
   "genre": "Felix-Dienste",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
-  "apkSize": 9348754,
-  "sha256": "c28536839063f05a5e78b1c2cae0fb69ddbea9c9151d62aafb378d7825a65192",
-  "versionCode": 10,
-  "versionName": "2.1.1",
+  "apkSize": 9348842,
+  "sha256": "d48789a4d320601abb317e73a26f10c2dbeebad348a4488047690fd07a6bfad3",
+  "versionCode": 11,
+  "versionName": "2.1.2",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/icon.png",
-  "screenshots": []
+  "screenshots": [],
+  "downloadManifestKey": "accountManager"
 }
