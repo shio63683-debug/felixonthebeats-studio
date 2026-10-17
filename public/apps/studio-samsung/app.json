@@ -9,10 +9,11 @@
   "packageName": "com.felixonthebeats.studio.samsung",
   "genre": "Tools",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
-  "apkSize": 29051208,
-  "sha256": "d5b683f07bdd0f5bc8ee270c6b6e0ca5e4daec6d49646bffc2b378e084d61784",
+  "apkSize": 30001792,
+  "sha256": "5326dcd914f60d27efa6aea96c13b92535e1e84e1741e58a049b8c9aaf67521d",
   "versionCode": 34,
   "versionName": "2.6.1",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/icon.png",
-  "screenshots": []
+  "screenshots": [],
+  "downloadManifestKey": "samsung"
 }
