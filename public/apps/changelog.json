@@ -41,6 +41,16 @@
   ],
   "store": [
     {
+      "version": "1.8.4",
+      "date": "17.10.2026",
+      "items": [
+        "App- und Spiele-Suche erkennt mehrteilige Namen, Paketnamen und Umlaute.",
+        "Beim Antippen der Suche öffnet sich direkt die Tastatur; die Startseite listet Apps statt sie nur in einer seitlichen Leiste zu zeigen.",
+        "Updates für FelixServer, AccountManager, Store und YouTube werden auf Android 11 und neuer zuverlässig erkannt.",
+        "Katalog- und Versionsdateien werden ohne lokalen HTTP-Cache neu geladen."
+      ]
+    },
+    {
       "version": "1.8.3",
       "date": "17.10.2026",
       "items": [
