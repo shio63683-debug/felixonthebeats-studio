@@ -90,5 +90,12 @@
     "version": "2.6.2",
     "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.2/FelixOnTheBeatsStudio-linuxmint.deb",
     "sha256": "9fac95e80e0740a38e44dd3c91d271f52c06591d24eca82df0adaa715442a73b"
+  },
+  "whochat": {
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/current.apk",
+    "sha256": "0eaeeec912fdeafe8972812475b59a9d7c86783ac7ab1365a5af00351e920fed",
+    "size": 6734716
   }
 }
