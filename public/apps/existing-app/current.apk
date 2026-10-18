@@ -1,0 +1,4 @@
+package: name='com.felixonthebeats.existing' versionCode='4' versionName='1.4.0' platformBuildVersionName='14'
+sdkVersion:'23'
+application-label:'Existing App'
+
