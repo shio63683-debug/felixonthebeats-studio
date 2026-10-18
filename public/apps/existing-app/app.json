@@ -1,0 +1,21 @@
+{
+  "id": "existing-app",
+  "name": "Existing App",
+  "description": "Bestehende Beschreibung",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "FELIXONTHEBEATS",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.existing",
+  "genre": "Tools",
+  "category": "app",
+  "minAndroid": 23,
+  "minRamMb": 2048,
+  "nativeAbi": "any",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/existing-app/current.apk",
+  "apkSize": 161,
+  "sha256": "f8fc8db0fbb8d5e78e26503f828dd44c8ba3a5ced5e9b9d57a076b26ac7a34a8",
+  "versionCode": 4,
+  "versionName": "1.4.0",
+  "screenshots": []
+}
