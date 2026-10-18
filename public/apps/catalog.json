@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generatedAt": "2026-10-18T03:44:18.272Z",
+  "generatedAt": "2026-10-18T17:21:57.369Z",
   "apps": [
     {
       "id": "studio-standard",
@@ -203,25 +203,27 @@
       "sha256": "59822c56272ab34192dc24d37b3121ebbe391b34773030e601d9a4eb88ecca62"
     },
     {
-      "id": "existing-app",
-      "name": "Existing App",
-      "description": "Bestehende Beschreibung",
+      "id": "felix-whochat",
+      "name": "WhoChat",
+      "description": "Private 1:1-Chats zwischen Felix-Konten. Nachrichten bleiben auf dem FelixServer gespeichert und lassen sich für das eigene Konto löschen.",
       "publisher": "FELIXONTHEBEATS",
-      "developerAccount": "FELIXONTHEBEATS",
+      "developerAccount": "shio63683-debug",
       "developerUrl": "https://github.com/shio63683-debug",
       "platform": "Android",
-      "packageName": "com.felixonthebeats.existing",
-      "genre": "Tools",
+      "packageName": "com.felixonthebeats.whochat",
       "category": "app",
+      "genre": "Kommunikation",
+      "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/current.apk",
       "minAndroid": 23,
-      "minRamMb": 2048,
+      "minRamMb": 1024,
       "nativeAbi": "any",
-      "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/existing-app/current.apk",
-      "apkSize": 161,
-      "sha256": "f8fc8db0fbb8d5e78e26503f828dd44c8ba3a5ced5e9b9d57a076b26ac7a34a8",
-      "versionCode": 4,
-      "versionName": "1.4.0",
-      "screenshots": []
+      "versionCode": 1,
+      "versionName": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/icon.png",
+      "screenshots": [],
+      "downloadManifestKey": "whochat",
+      "apkSize": 6734716,
+      "sha256": "0eaeeec912fdeafe8972812475b59a9d7c86783ac7ab1365a5af00351e920fed"
     }
   ]
 }
