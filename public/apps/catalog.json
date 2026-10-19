@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generatedAt": "2026-10-19T16:18:45.882Z",
+  "generatedAt": "2026-10-19T19:01:52.794Z",
   "apps": [
     {
       "id": "remote-felixbot",
@@ -12,12 +12,14 @@
       "platform": "Android",
       "packageName": "com.felixonthebeats.remote",
       "genre": "Fernsteuerung",
-      "versionCode": 13,
-      "versionName": "1.2.1",
+      "versionCode": 14,
+      "versionName": "1.2.2",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/icon.png",
       "screenshots": [],
       "downloadManifestKey": "remote",
-      "availability": "temporarily_unavailable"
+      "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/current.apk",
+      "apkSize": 15299016,
+      "sha256": "857012d7e7da737e3fe274ce190736d395d370b18dc426e92dd04be88a639a78"
     },
     {
       "id": "felix-app-store",
@@ -111,10 +113,10 @@
       "category": "service",
       "genre": "Felix-Dienste",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
-      "apkSize": 6992004,
-      "sha256": "5a67bd8d9229835bf472eda5db93be8e69cf71bbaeef0a1812b2dcbfed817ded",
-      "versionCode": 15,
-      "versionName": "2.1.6",
+      "apkSize": 6992000,
+      "sha256": "2e4d50defaea9412458c0ad7867c0b393f68f4ebd836109429b3464560357f18",
+      "versionCode": 16,
+      "versionName": "2.1.7",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/icon.png",
       "screenshots": [],
       "downloadManifestKey": "accountManager"
