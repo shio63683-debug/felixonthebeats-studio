@@ -1,4 +1,43 @@
 {
+  "remote": [
+    {
+      "version": "1.2.2",
+      "date": "19.10.2026",
+      "items": [
+        "FelixServer-Verbindung für Remote FelixBot wieder freigegeben.",
+        "Startabsturz bei noch nicht initialisierter Ansicht behoben."
+      ]
+    },
+    {
+      "version": "1.2.1",
+      "date": "18.10.2026",
+      "items": [
+        "Neue Meldungen: Statt „Bot-Gerät“ ist nur noch von unseren FelixServern die Rede."
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "17.10.2026",
+      "items": [
+        "Neu paketierte Remote-FelixBot-Ausgabe für den zentralen FelixStore-Katalog; keine zusätzlichen Remote-Funktionen."
+      ]
+    },
+    {
+      "version": "1.1.9",
+      "date": "17.10.2026",
+      "items": [
+        "Fehlende Dienste öffnen den Felixstore statt GitHub.",
+        "„Was ist neu?“ im Menü."
+      ]
+    },
+    {
+      "version": "1.1.8",
+      "date": "17.10.2026",
+      "items": [
+        "Anmeldung per WhatsApp-Code und Kontoauswahl."
+      ]
+    }
+  ],
   "inselschlacht": [
     {
       "version": "1.1.2.25",
@@ -298,6 +337,13 @@
   ],
   "accountManager": [
     {
+      "version": "2.1.7",
+      "date": "19.10.2026",
+      "items": [
+        "WhoChat kann Felix-Konten sicher über den AccountManager verwenden; das abweichende WhoChat-Zertifikat wird fest geprüft."
+      ]
+    },
+    {
       "version": "2.1.5",
       "date": "18.10.2026",
       "items": [
@@ -565,37 +611,6 @@
       "items": [
         "Creator-Konten können Apps und Spiele mit Angaben zu Android-Version, RAM und Prozessorarchitektur zur Owner-Freigabe einreichen.",
         "APK-Uploads bis zu 5 GB mit Prüfsumme und FelixServer-Zwischenspeicherung."
-      ]
-    }
-  ],
-  "remote": [
-    {
-      "version": "1.2.1",
-      "date": "18.10.2026",
-      "items": [
-        "Neue Meldungen: Statt „Bot-Gerät“ ist nur noch von unseren FelixServern die Rede."
-      ]
-    },
-    {
-      "version": "1.2.0",
-      "date": "17.10.2026",
-      "items": [
-        "Neu paketierte Remote-FelixBot-Ausgabe für den zentralen FelixStore-Katalog; keine zusätzlichen Remote-Funktionen."
-      ]
-    },
-    {
-      "version": "1.1.9",
-      "date": "17.10.2026",
-      "items": [
-        "Fehlende Dienste öffnen den Felixstore statt GitHub.",
-        "„Was ist neu?“ im Menü."
-      ]
-    },
-    {
-      "version": "1.1.8",
-      "date": "17.10.2026",
-      "items": [
-        "Anmeldung per WhatsApp-Code und Kontoauswahl."
       ]
     }
   ],
