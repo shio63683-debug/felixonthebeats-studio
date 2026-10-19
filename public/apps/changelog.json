@@ -1,5 +1,52 @@
 {
+  "inselschlacht": [
+    {
+      "version": "1.1.2.25",
+      "date": "19.10.2026",
+      "items": [
+        "FelixServer-Konto erforderlich; Spielprofil, Starterpaket, Münzen, Skins und Emotes werden serverseitig gespeichert.",
+        "Kostenloses Starterpaket mit 800 Münzen, fünf Skins und Battle Pass.",
+        "Einzelspieler- und lokale/LAN-Runden bleiben verfügbar; Online-Matchmaking ist noch nicht enthalten.",
+        "Diese APK ist mit dem aktuellen FelixServer-Signierschlüssel signiert. Nutzer von 1.1.2.20 müssen die alte App vor der Installation deinstallieren."
+      ]
+    }
+  ],
+  "music": [
+    {
+      "version": "1.0.0",
+      "date": "19.10.2026",
+      "items": [
+        "Erste FelixOnTheBeats-Musik-App mit FelixServer-Anmeldung und Live-Musikkatalog.",
+        "Musiktitel können verschlüsselt auf dem Gerät gespeichert und offline abgespielt werden.",
+        "Hintergrundwiedergabe mit Pause- und Stopp-Steuerung über die Benachrichtigung."
+      ]
+    }
+  ],
+  "browser": [
+    {
+      "version": "1.5.3",
+      "date": "19.10.2026",
+      "items": [
+        "owner.org zeigt den Verbindungsstatus des separaten OTP-Zweitbots und erklärt die Einrichtung."
+      ]
+    },
+    {
+      "version": "1.5.2",
+      "date": "19.10.2026",
+      "items": [
+        "FLC-WEB wird mit den aktuellen Felix-App-Updates veröffentlicht."
+      ]
+    }
+  ],
   "studio": [
+    {
+      "version": "2.6.3",
+      "date": "18.10.2026",
+      "items": [
+        "Standard- und Samsung-Bots enthalten keine vorinstallierten Felix-WhatsApp-Befehle mehr; eigener Bot-Code bleibt bearbeitbar.",
+        "Befehls-Pakete werden nicht mehr automatisch in Standard- und Samsung-Bots eingespielt."
+      ]
+    },
     {
       "version": "2.6.2",
       "date": "18.10.2026",
@@ -56,6 +103,14 @@
     }
   ],
   "store": [
+    {
+      "version": "1.10.2",
+      "date": "18.10.2026",
+      "items": [
+        "Doppelte Einträge mit demselben Android-Paket werden ausgeblendet; die höchste veröffentlichte Version bleibt sichtbar.",
+        "Die Standard- und Samsung-Studio-Apps wurden aus dem FelixAppStore-Katalog entfernt."
+      ]
+    },
     {
       "version": "1.10.0",
       "date": "18.10.2026",
