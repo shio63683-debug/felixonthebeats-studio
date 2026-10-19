@@ -84,11 +84,11 @@
     "size": 6696912
   },
   "inselschlacht": {
-    "versionCode": 1010226,
-    "versionName": "1.1.2.26",
+    "versionCode": 1010227,
+    "versionName": "1.1.2.27",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/current.apk",
-    "sha256": "ab9252b9149dd65da6ac326c48240666895bf984e6ce6e998ca3a9d2a3298109",
-    "size": 19010472
+    "sha256": "a68827a017b2137ae486f34fe1e0cf63c4e20df73168b47c2b3675fb0d356864",
+    "size": 19010784
   },
   "desktop": {
     "version": "2.6.3",
