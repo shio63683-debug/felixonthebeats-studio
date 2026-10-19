@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generatedAt": "2026-10-19T20:10:05.047Z",
+  "generatedAt": "2026-10-19T20:42:28.146Z",
   "apps": [
     {
       "id": "remote-felixbot",
@@ -202,11 +202,11 @@
       "minRamMb": 2048,
       "nativeAbi": "any",
       "downloadManifestKey": "inselschlacht",
-      "versionCode": 1010226,
-      "versionName": "1.1.2.26",
+      "versionCode": 1010227,
+      "versionName": "1.1.2.27",
       "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/current.apk",
-      "apkSize": 19010472,
-      "sha256": "ab9252b9149dd65da6ac326c48240666895bf984e6ce6e998ca3a9d2a3298109",
+      "apkSize": 19010784,
+      "sha256": "a68827a017b2137ae486f34fe1e0cf63c4e20df73168b47c2b3675fb0d356864",
       "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/icon.png",
       "screenshots": []
     },
