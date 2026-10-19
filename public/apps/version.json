@@ -1,95 +1,71 @@
 {
-  "versionCode": 35,
-  "versionName": "2.6.2",
+  "versionCode": 36,
+  "versionName": "2.6.3",
   "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
-  "sha256": "daa65413c2e9c05c644b7934a72e2ed4c0d689163d0b72e7c31501a12cd86ec1",
-  "size": 29097508,
-  "notes": "Version 2.6.2: neue Meldungen (nur noch unsere FelixServer, offline-Hinweis, Widerspruch bei Sperre), Felixstore 1.10.0 mit storefelix.com",
-  "samsung": {
-    "versionCode": 35,
-    "versionName": "2.6.2",
-    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
-    "sha256": "963d7eb6a23cc92a347b0328be2680a81d83c98937a241b564efa913d0c0eecc",
-    "size": 29078288,
-    "notes": "Version 2.6.2: neue Meldungen (nur noch unsere FelixServer, offline-Hinweis, Widerspruch bei Sperre), Felixstore 1.10.0 mit storefelix.com"
-  },
+  "sha256": "7468cfec71f3ab415247e2213f645b71620ebcf392325a763553116ec35cd8aa",
+  "size": 24419168,
+  "notes": "FelixServer 1.5.6 mit Inselschlacht 1.1.2.25 und Felix Musik 1.0.0",
   "remote": {
     "versionCode": 13,
     "versionName": "1.2.1",
-    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/current.apk",
-    "sha256": "4dc1eb6d78539edd4cb54f8b2f18a1350b4865e6579994e9d7af6a3775fb6fa0",
-    "size": 17650371
+    "availability": "temporarily_unavailable"
+  },
+  "samsung": {
+    "versionCode": 36,
+    "versionName": "2.6.3",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
+    "sha256": "5ce606bbe3e756a1cf38188f879a20d75047ba249dc66ba7002cfe16cb09420f",
+    "size": 24388192,
+    "notes": "FelixServer 1.5.6 mit Inselschlacht 1.1.2.25 und Felix Musik 1.0.0"
   },
   "store": {
-    "versionCode": 37,
-    "versionName": "1.10.0",
+    "versionCode": 39,
+    "versionName": "1.10.2",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-    "sha256": "911d53e1e67c688671c3203b65bbbbe8a48d824218261bc23963516ffb82e126",
-    "size": 9838959
+    "sha256": "45654eb3661944085ca4f2a5ecc7ed8d856fbb9f8618fc3d3ccfbfb37d1207f6",
+    "size": 7453964
   },
   "server": {
-    "versionCode": 15,
-    "versionName": "1.5.5",
+    "versionCode": 16,
+    "versionName": "1.5.6",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/current.apk",
-    "sha256": "ec1a6298821ee219aca3fe72a8aaefe0790b0f4df977b4478630e53e1a150431",
-    "size": 9227427
+    "sha256": "8cb8077f53307c7582ba4e1e5579d51e8f321b854aa8f8947fbfea034c206e0e",
+    "size": 6901070
   },
   "accountManager": {
-    "versionCode": 14,
-    "versionName": "2.1.5",
+    "versionCode": 15,
+    "versionName": "2.1.6",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
-    "sha256": "261d91da498120921b74e75fc6e2745901f60b9bd7bf5e360270f38e472f24ad",
-    "size": 9348865
+    "sha256": "5a67bd8d9229835bf472eda5db93be8e69cf71bbaeef0a1812b2dcbfed817ded",
+    "size": 6992004
   },
   "browser": {
-    "versionCode": 10,
-    "versionName": "1.5.1",
+    "versionCode": 12,
+    "versionName": "1.5.3",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/current.apk",
-    "sha256": "906dc52b95e7de0580a0ca963d3b54b5ed32205a4b50b2498376e4674bf318e6",
-    "size": 9795526
+    "sha256": "17cf525a26056d61b3df519fc7dcffc9173e852ebdfd6bdc67469d1b7e2eae42",
+    "size": 7344302
   },
   "youtube": {
     "versionCode": 9,
     "versionName": "1.3.2",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/current.apk",
-    "sha256": "a90c7eb02b3dcb8918db1579f49d65ba0030339bd3386cfec8b69828f09856c3",
-    "size": 9158122
+    "sha256": "c4980c6ba314a84940f3234fed8da67c4d4ba47e99a6cd7c6847fb998464afcf",
+    "size": 6794858
   },
   "creatorUpload": {
     "versionCode": 3,
     "versionName": "1.1.1",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-creator-upload/current.apk",
-    "sha256": "b42131f00f92b65a45e2396839b94665fcc764a9fea6ee97a8a27013b6553214",
-    "size": 9053202
+    "sha256": "4f1f32a7bb0aa8a8de80133f4087d925bc5e70bbdc7fcde8f60474ae04e93afa",
+    "size": 6722922
   },
   "cloudGallery": {
     "versionCode": 5,
     "versionName": "1.2.1",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-cloud-gallery/current.apk",
-    "sha256": "59822c56272ab34192dc24d37b3121ebbe391b34773030e601d9a4eb88ecca62",
-    "size": 9102459
-  },
-  "desktop": {
-    "version": "2.6.2",
-    "files": {
-      "linux": {
-        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.2/FelixStudioDesktop-linux",
-        "sha256": "64c27972808e0dc8e33c6a570bf29ac36620461b70b5c3a940ebc2319a97c7f9"
-      },
-      "deb": {
-        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.2/FelixStudioDesktop-linuxmint.deb",
-        "sha256": "98f74dbd8719f05d0c60ced353c64d8121f722ad04e703a48f9002e29c64acbc"
-      },
-      "windows": {
-        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.2/FelixStudioDesktop.exe",
-        "sha256": "a2ae084cc1f97ecc5b86dd2278e47610741255ca151a760528549ccc044b3868"
-      }
-    }
-  },
-  "linuxStudio": {
-    "version": "2.6.2",
-    "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.2/FelixOnTheBeatsStudio-linuxmint.deb",
-    "sha256": "9fac95e80e0740a38e44dd3c91d271f52c06591d24eca82df0adaa715442a73b"
+    "sha256": "2896db28af176433bb6893ac36eefe552e3cc45c8ea62fd90e370f0ba5c3c907",
+    "size": 6755812
   },
   "whochat": {
     "versionCode": 1,
@@ -97,5 +73,41 @@
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/current.apk",
     "sha256": "0eaeeec912fdeafe8972812475b59a9d7c86783ac7ab1365a5af00351e920fed",
     "size": 6734716
+  },
+  "music": {
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-music/current.apk",
+    "sha256": "fc67675df730481a11e86d1750e0d31aba127f7a5bf597a861c523cca54a16a9",
+    "size": 6696912
+  },
+  "inselschlacht": {
+    "versionCode": 1010225,
+    "versionName": "1.1.2.25",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/current.apk",
+    "sha256": "548f5378680f02e94dbb58f4d9b87a4c4dd2bfa6a70edb3cbfd32425c4b8147a",
+    "size": 7401016
+  },
+  "desktop": {
+    "version": "2.6.3",
+    "files": {
+      "linux": {
+        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.3/FelixStudioDesktop-linux",
+        "sha256": "64c27972808e0dc8e33c6a570bf29ac36620461b70b5c3a940ebc2319a97c7f9"
+      },
+      "deb": {
+        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.3/FelixStudioDesktop-linuxmint.deb",
+        "sha256": "98f74dbd8719f05d0c60ced353c64d8121f722ad04e703a48f9002e29c64acbc"
+      },
+      "windows": {
+        "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.3/FelixStudioDesktop.exe",
+        "sha256": "a2ae084cc1f97ecc5b86dd2278e47610741255ca151a760528549ccc044b3868"
+      }
+    }
+  },
+  "linuxStudio": {
+    "version": "2.6.3",
+    "url": "https://github.com/shio63683-debug/felixonthebeats-studio/releases/download/v2.6.3/FelixOnTheBeatsStudio-linuxmint.deb",
+    "sha256": "9fac95e80e0740a38e44dd3c91d271f52c06591d24eca82df0adaa715442a73b"
   }
 }
