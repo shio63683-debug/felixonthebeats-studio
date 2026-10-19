@@ -8,12 +8,10 @@
   "platform": "Android",
   "packageName": "com.felixonthebeats.remote",
   "genre": "Fernsteuerung",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/current.apk",
-  "apkSize": 17650371,
-  "sha256": "4dc1eb6d78539edd4cb54f8b2f18a1350b4865e6579994e9d7af6a3775fb6fa0",
   "versionCode": 13,
   "versionName": "1.2.1",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/icon.png",
   "screenshots": [],
-  "downloadManifestKey": "remote"
+  "downloadManifestKey": "remote",
+  "availability": "temporarily_unavailable"
 }
