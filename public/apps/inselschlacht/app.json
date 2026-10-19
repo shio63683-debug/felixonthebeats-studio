@@ -1,0 +1,23 @@
+{
+  "id": "inselschlacht",
+  "name": "Inselschlacht",
+  "description": "Action-Spiel mit FelixServer-Konto, servergespeichertem Profil, kostenlosem Starterpaket und Shop. Einzelspieler- und lokale/LAN-Runden sind enthalten; Online-Lobbys und Internet-Matchmaking sind noch nicht verfügbar.",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.inselschlacht",
+  "category": "game",
+  "genre": "Action",
+  "minAndroid": 24,
+  "minRamMb": 2048,
+  "nativeAbi": "any",
+  "downloadManifestKey": "inselschlacht",
+  "versionCode": 1010225,
+  "versionName": "1.1.2.25",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/current.apk",
+  "apkSize": 7401016,
+  "sha256": "548f5378680f02e94dbb58f4d9b87a4c4dd2bfa6a70edb3cbfd32425c4b8147a",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/icon.png",
+  "screenshots": []
+}
