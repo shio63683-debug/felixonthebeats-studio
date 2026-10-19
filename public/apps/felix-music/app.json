@@ -1,0 +1,23 @@
+{
+  "id": "felix-music",
+  "name": "FelixOnTheBeats Musik",
+  "description": "Spiele die Musik aus deiner Felix-Bibliothek live über FelixServer ab oder speichere Titel für unterwegs. Offline-Dateien werden mit einem Android-Keystore-Schlüssel verschlüsselt und können nur in dieser App wiedergegeben werden. Hintergrundwiedergabe mit Steuerung über die Benachrichtigung.",
+  "publisher": "FELIXONTHEBEATS",
+  "developerAccount": "shio63683-debug",
+  "developerUrl": "https://github.com/shio63683-debug",
+  "platform": "Android",
+  "packageName": "com.felixonthebeats.music",
+  "category": "app",
+  "genre": "Musik & Audio",
+  "minAndroid": 23,
+  "minRamMb": 1024,
+  "nativeAbi": "any",
+  "downloadManifestKey": "music",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-music/current.apk",
+  "apkSize": 6696912,
+  "sha256": "fc67675df730481a11e86d1750e0d31aba127f7a5bf597a861c523cca54a16a9",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-music/icon.png",
+  "screenshots": []
+}
