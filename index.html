@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remote FelixBot</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' blob: data:; media-src blob:; connect-src https:; manifest-src 'self'">
+<meta name="theme-color" content="#070b14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FelixBot">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<style>
+  :root { --bg: #0a0f0d; --surface: #131a17; --high: #1b2520; --green: #22e06b; --red: #ff4d5e; --amber: #ffc857; --text: #e9f3ee; --dim: #8fa39a; --line: #2a3a33; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, "Segoe UI", sans-serif; }
+  header { display: flex; align-items: center; gap: 16px; padding: 14px 22px; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0; font-size: 18px; letter-spacing: 2px; color: var(--green); }
+  header .host { color: var(--dim); flex: 1; }
+  main { max-width: 1100px; margin: 0 auto; padding: 22px; }
+  button { font: inherit; color: var(--text); background: var(--high); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; cursor: pointer; }
+  button:hover { border-color: var(--green); }
+  button.primary { background: var(--green); color: var(--bg); border-color: var(--green); font-weight: 700; }
+  button.danger { color: var(--red); }
+  button:disabled { opacity: .5; cursor: default; }
+  input, select, textarea { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+  textarea { width: 100%; height: 55vh; font: 13px/1.4 ui-monospace, Consolas, monospace; white-space: pre; tab-size: 2; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; margin-bottom: 16px; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .grow { flex: 1; }
+  .dim { color: var(--dim); }
+  .error { color: var(--red); }
+  .ok { color: var(--green); }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+  .tabs button.active { background: var(--green); color: var(--bg); border-color: var(--green); font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--dim); font-weight: 600; font-size: 13px; }
+  tr.entry { cursor: pointer; }
+  tr.entry:hover td { background: var(--high); }
+  .code-input { font-size: 30px; letter-spacing: 10px; width: 250px; text-align: center; }
+  .sas { font-size: 46px; font-weight: 800; letter-spacing: 8px; color: var(--green); }
+  .center { text-align: center; max-width: 520px; margin: 8vh auto; }
+  .crumbs button { background: none; border: none; padding: 2px 4px; color: var(--green); }
+  img.preview, video.preview { max-width: 100%; max-height: 55vh; border-radius: 12px; }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 99px; font-size: 12px; font-weight: 700; }
+  .badge.banned { background: rgba(255,77,94,.15); color: var(--red); }
+  .badge.active { background: rgba(34,224,107,.12); color: var(--green); }
+  progress { width: 100%; height: 10px; accent-color: var(--green); }
+  /* Die Fernbedienung im Browser (iPhone und andere) ist die blaue Ausgabe. */
+  :root.web { --bg: #070b14; --surface: #0f1626; --high: #18223a; --green: #3d8bff; --text: #e8eefc; --dim: #8b9bbd; --line: #26334f; }
+  :root.web .badge.active { background: rgba(61,139,255,.14); }
+  @media (max-width: 640px) {
+    header { padding: 12px 14px; gap: 10px; flex-wrap: wrap; }
+    header h1 { font-size: 15px; }
+    main { padding: 12px; }
+    .card { padding: 14px; }
+    table { display: block; overflow-x: auto; white-space: nowrap; }
+    .code-input { width: 100%; letter-spacing: 6px; }
+    textarea { height: 48vh; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>FELIXONTHEBEATS STUDIO</h1>
+  <span class="host" id="host"></span>
+  <button id="unlink" hidden>Verbindung trennen</button>
+  <button id="quit">Beenden</button>
+</header>
+<main id="app"></main>
+<script>
+// Fernzugriff im Browser (iPhone, iPad und alles andere ohne eigenes Programm): dasselbe Protokoll wie
+// src/remote/client.js, aber mit der Kryptografie des Browsers statt der von Node.js.
+(function (root) {
+  'use strict';
+
+  const subtle = root.crypto.subtle;
+  const encoder = new TextEncoder();
+  const decoder = new TextDecoder();
+  const NTFY = 'https://ntfy.sh';
+  const MAX_MESSAGE_BYTES = 3800;
+
+  // ---------------------------------------------------------------- Bytes
+
+  function bytesOf(value) {
+    return typeof value === 'string' ? encoder.encode(value) : value;
+  }
+
+  function concat(...parts) {
+    const all = parts.map(bytesOf);
+    const result = new Uint8Array(all.reduce((sum, part) => sum + part.length, 0));
+    let offset = 0;
+    for (const part of all) {
+      result.set(part, offset);
+      offset += part.length;
+    }
+    return result;
+  }
+
+  function toBase64Url(bytes) {
+    let binary = '';
+    for (let index = 0; index < bytes.length; index += 0x8000) binary += String.fromCharCode.apply(null, bytes.subarray(index, index + 0x8000));
+    return btoa(binary).replace(/\+/gu, '-').replace(/\//gu, '_').replace(/=+$/u, '');
+  }
+
+  function fromBase64Url(text, length) {
+    if (typeof text !== 'string' || /[^A-Za-z0-9_-]/u.test(text)) return null;
+    let binary;
+    try {
+      binary = atob(text.replace(/-/gu, '+').replace(/_/gu, '/'));
+    } catch {
+      return null;
+    }
+    const bytes = new Uint8Array(binary.length);
+    for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+    return length === undefined || bytes.length === length ? bytes : null;
+  }
+
+  function randomBytes(length) {
+    return root.crypto.getRandomValues(new Uint8Array(length));
+  }
+
+  function sameBytes(left, right) {
+    if (left.length !== right.length) return false;
+    let difference = 0;
+    for (let index = 0; index < left.length; index += 1) difference |= left[index] ^ right[index];
+    return difference === 0;
+  }
+
+  // ---------------------------------------------------------------- Bausteine
+
+  async function sha256(...parts) {
+    return new Uint8Array(await subtle.digest('SHA-256', concat(...parts)));
+  }
+
+  async function hmac(key, data) {
+    const imported = await subtle.importKey('raw', key, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+    return new Uint8Array(await subtle.sign('HMAC', imported, bytesOf(data)));
+  }
+
+  async function pbkdf2(password, salt, length) {
+    const key = await subtle.importKey('raw', password, 'PBKDF2', false, ['deriveBits']);
+    return new Uint8Array(await subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt, iterations: 1 }, key, length * 8));
+  }
+
+  function salsa208(x) {
+    let x0 = x[0], x1 = x[1], x2 = x[2], x3 = x[3], x4 = x[4], x5 = x[5], x6 = x[6], x7 = x[7];
+    let x8 = x[8], x9 = x[9], x10 = x[10], x11 = x[11], x12 = x[12], x13 = x[13], x14 = x[14], x15 = x[15];
+    let u;
+    for (let round = 0; round < 4; round += 1) {
+      u = x0 + x12; x4 ^= (u << 7) | (u >>> 25);
+      u = x4 + x0; x8 ^= (u << 9) | (u >>> 23);
+      u = x8 + x4; x12 ^= (u << 13) | (u >>> 19);
+      u = x12 + x8; x0 ^= (u << 18) | (u >>> 14);
+      u = x5 + x1; x9 ^= (u << 7) | (u >>> 25);
+      u = x9 + x5; x13 ^= (u << 9) | (u >>> 23);
+      u = x13 + x9; x1 ^= (u << 13) | (u >>> 19);
+      u = x1 + x13; x5 ^= (u << 18) | (u >>> 14);
+      u = x10 + x6; x14 ^= (u << 7) | (u >>> 25);
+      u = x14 + x10; x2 ^= (u << 9) | (u >>> 23);
+      u = x2 + x14; x6 ^= (u << 13) | (u >>> 19);
+      u = x6 + x2; x10 ^= (u << 18) | (u >>> 14);
+      u = x15 + x11; x3 ^= (u << 7) | (u >>> 25);
+      u = x3 + x15; x7 ^= (u << 9) | (u >>> 23);
+      u = x7 + x3; x11 ^= (u << 13) | (u >>> 19);
+      u = x11 + x7; x15 ^= (u << 18) | (u >>> 14);
+      u = x0 + x3; x1 ^= (u << 7) | (u >>> 25);
+      u = x1 + x0; x2 ^= (u << 9) | (u >>> 23);
+      u = x2 + x1; x3 ^= (u << 13) | (u >>> 19);
+      u = x3 + x2; x0 ^= (u << 18) | (u >>> 14);
+      u = x5 + x4; x6 ^= (u << 7) | (u >>> 25);
+      u = x6 + x5; x7 ^= (u << 9) | (u >>> 23);
+      u = x7 + x6; x4 ^= (u << 13) | (u >>> 19);
+      u = x4 + x7; x5 ^= (u << 18) | (u >>> 14);
+      u = x10 + x9; x11 ^= (u << 7) | (u >>> 25);
+      u = x11 + x10; x8 ^= (u << 9) | (u >>> 23);
+      u = x8 + x11; x9 ^= (u << 13) | (u >>> 19);
+      u = x9 + x8; x10 ^= (u << 18) | (u >>> 14);
+      u = x15 + x14; x12 ^= (u << 7) | (u >>> 25);
+      u = x12 + x15; x13 ^= (u << 9) | (u >>> 23);
+      u = x13 + x12; x14 ^= (u << 13) | (u >>> 19);
+      u = x14 + x13; x15 ^= (u << 18) | (u >>> 14);
+    }
+    x[0] += x0; x[1] += x1; x[2] += x2; x[3] += x3; x[4] += x4; x[5] += x5; x[6] += x6; x[7] += x7;
+    x[8] += x8; x[9] += x9; x[10] += x10; x[11] += x11; x[12] += x12; x[13] += x13; x[14] += x14; x[15] += x15;
+  }
+
+  function blockMix(block, scratch, r, x) {
+    const last = (2 * r - 1) * 16;
+    for (let word = 0; word < 16; word += 1) x[word] = block[last + word];
+    for (let index = 0; index < 2 * r; index += 1) {
+      const source = index * 16;
+      for (let word = 0; word < 16; word += 1) x[word] ^= block[source + word];
+      salsa208(x);
+      // Gerade Teilblöcke kommen in die erste Hälfte, ungerade in die zweite.
+      scratch.set(x, (index % 2 === 0 ? index / 2 : r + (index - 1) / 2) * 16);
+    }
+    block.set(scratch);
+  }
+
+  /** scrypt nach RFC 7914; rechnet in 32-Bit-Wörtern und setzt deshalb die übliche Byte-Reihenfolge (Little Endian) voraus. */
+  async function scrypt(password, salt, N, r, p, length) {
+    const blockWords = 32 * r;
+    const derived = await pbkdf2(bytesOf(password), bytesOf(salt), p * 128 * r);
+    const words = new Uint32Array(derived.buffer, derived.byteOffset, derived.length / 4);
+    const memory = new Uint32Array(N * blockWords);
+    const scratch = new Uint32Array(blockWords);
+    const x = new Uint32Array(16);
+    for (let part = 0; part < p; part += 1) {
+      const block = words.subarray(part * blockWords, (part + 1) * blockWords);
+      for (let index = 0; index < N; index += 1) {
+        memory.set(block, index * blockWords);
+        blockMix(block, scratch, r, x);
+      }
+      for (let index = 0; index < N; index += 1) {
+        const offset = (block[blockWords - 16] & (N - 1)) * blockWords;
+        for (let word = 0; word < blockWords; word += 1) block[word] ^= memory[offset + word];
+        blockMix(block, scratch, r, x);
+      }
+    }
+    return pbkdf2(bytesOf(password), derived, length);
+  }
+
+  // X25519 nach RFC 7748 mit den großen Zahlen des Browsers. Die Rechenzeit hängt vom Schlüssel ab; das ist hier
+  // vertretbar, weil jeder Schlüssel nur für eine einzige Kopplung gilt.
+  const P = (1n << 255n) - 19n;
+
+  function littleEndianNumber(bytes) {
+    let value = 0n;
+    for (let index = bytes.length - 1; index >= 0; index -= 1) value = (value << 8n) | BigInt(bytes[index]);
+    return value;
+  }
+
+  function power(base, exponent) {
+    let result = 1n;
+    let factor = base % P;
+    for (let rest = exponent; rest > 0n; rest >>= 1n) {
+      if (rest & 1n) result = (result * factor) % P;
+      factor = (factor * factor) % P;
+    }
+    return result;
+  }
+
+  function x25519(scalarBytes, pointBytes) {
+    const clamped = new Uint8Array(scalarBytes);
+    clamped[0] &= 248;
+    clamped[31] = (clamped[31] & 127) | 64;
+    const scalar = littleEndianNumber(clamped);
+    const masked = new Uint8Array(pointBytes);
+    masked[31] &= 127;
+    const x1 = littleEndianNumber(masked) % P;
+    let x2 = 1n, z2 = 0n, x3 = x1, z3 = 1n, swap = 0n;
+    for (let bit = 254n; bit >= 0n; bit -= 1n) {
+      const current = (scalar >> bit) & 1n;
+      if (swap ^ current) {
+        [x2, x3] = [x3, x2];
+        [z2, z3] = [z3, z2];
+      }
+      swap = current;
+      const a = (x2 + z2) % P;
+      const aa = (a * a) % P;
+      const b = (x2 - z2 + P) % P;
+      const bb = (b * b) % P;
+      const e = (aa - bb + P) % P;
+      const c = (x3 + z3) % P;
+      const d = (x3 - z3 + P) % P;
+      const da = (d * a) % P;
+      const cb = (c * b) % P;
+      x3 = ((da + cb) % P) ** 2n % P;
+      z3 = (x1 * (((da - cb + P) % P) ** 2n % P)) % P;
+      x2 = (aa * bb) % P;
+      z2 = (e * ((aa + 121665n * e) % P)) % P;
+    }
+    if (swap) {
+      [x2, x3] = [x3, x2];
+      [z2, z3] = [z3, z2];
+    }
+    let value = (x2 * power(z2, P - 2n)) % P;
+    const result = new Uint8Array(32);
+    for (let index = 0; index < 32; index += 1) {
+      result[index] = Number(value & 255n);
+      value >>= 8n;
+    }
+    return result;
+  }
+
+  const BASE_POINT = new Uint8Array(32);
+  BASE_POINT[0] = 9;
+
+  function newKeyPair() {
+    const privateKey = randomBytes(32);
+    return { privateKey, publicKey: x25519(privateKey, BASE_POINT) };
+  }
+
+  function sharedSecret(privateKey, peerPublicKey) {
+    const shared = x25519(privateKey, peerPublicKey);
+    if (shared.every((byte) => byte === 0)) throw new Error('Ungültiger öffentlicher Schlüssel.');
+    return shared;
+  }
+
+  // ---------------------------------------------------------------- Protokoll
+
+  function normalizeCode(input) {
+    const digits = String(input ?? '').replace(/\D/gu, '');
+    return digits.length === 6 ? digits : null;
+  }
+
+  async function pairingTopic(code) {
+    return `fxp${toBase64Url(await scrypt(code, 'felix-studio-remote/pairing/v1', 16384, 8, 1, 24))}`;
+  }
+
+  async function linkTopic(linkKey) {
+    return `fxl${toBase64Url(await hmac(linkKey, 'felix-studio-remote/topic/v1')).slice(0, 32)}`;
+  }
+
+  function commitment(publicKey, nonce) {
+    return sha256(publicKey, nonce);
+  }
+
+  async function sessionKey({ shared, code, clientPublicKey, hostPublicKey, clientNonce, hostNonce }) {
+    const salt = await sha256(code, clientPublicKey, hostPublicKey, clientNonce, hostNonce);
+    const key = await subtle.importKey('raw', shared, 'HKDF', false, ['deriveBits']);
+    return new Uint8Array(await subtle.deriveBits({ name: 'HKDF', hash: 'SHA-256', salt, info: encoder.encode('felix-studio-remote/session/v1') }, key, 256));
+  }
+
+  async function verificationNumber(key) {
+    const digest = await hmac(key, 'felix-studio-remote/sas/v1');
+    return String(new DataView(digest.buffer, digest.byteOffset).getUint32(0) % 10000).padStart(4, '0');
+  }
+
+  // Aufbau wie in src/remote/crypto.js: 12 Bytes Startwert, 16 Bytes Prüfwert, dann die Daten.
+  async function sealBytes(key, plain) {
+    const iv = randomBytes(12);
+    const imported = await subtle.importKey('raw', key, 'AES-GCM', false, ['encrypt']);
+    const sealed = new Uint8Array(await subtle.encrypt({ name: 'AES-GCM', iv }, imported, plain));
+    return concat(iv, sealed.subarray(sealed.length - 16), sealed.subarray(0, sealed.length - 16));
+  }
+
+  async function openBytes(key, box) {
+    if (!(box instanceof Uint8Array) || box.length < 28) throw new Error('Die Nachricht ist beschädigt.');
+    const imported = await subtle.importKey('raw', key, 'AES-GCM', false, ['decrypt']);
+    try {
+      return new Uint8Array(await subtle.decrypt({ name: 'AES-GCM', iv: box.subarray(0, 12) }, imported, concat(box.subarray(28), box.subarray(12, 28))));
+    } catch {
+      throw new Error('Die Nachricht ließ sich nicht entschlüsseln.');
+    }
+  }
+
+  async function seal(key, value) {
+    return toBase64Url(await sealBytes(key, encoder.encode(JSON.stringify(value))));
+  }
+
+  async function open(key, box) {
+    const bytes = fromBase64Url(box);
+    if (!bytes) throw new Error('Die Nachricht ist beschädigt.');
+    return JSON.parse(decoder.decode(await openBytes(key, bytes)));
+  }
+
+  // ---------------------------------------------------------------- Vermittlung (ntfy.sh)
+
+  function timeoutSignal(milliseconds) {
+    // Ältere Browser (Safari vor Version 16) kennen AbortSignal.timeout noch nicht.
+    if (typeof AbortSignal.timeout === 'function') return AbortSignal.timeout(milliseconds);
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), milliseconds);
+    return controller.signal;
+  }
+
+  function parseEvents(text) {
+    return text.split('\n').filter((line) => line.trim()).flatMap((line) => {
+      try {
+        const event = JSON.parse(line);
+        return event && typeof event === 'object' ? [event] : [];
+      } catch {
+        return [];
+      }
+    });
+  }
+
+  function payloadOf(event) {
+    if (event.event !== 'message' || typeof event.message !== 'string') return null;
+    try {
+      const payload = JSON.parse(event.message);
+      return payload && typeof payload === 'object' ? payload : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function createRelay({ server = NTFY, fetch: fetchImpl = root.fetch.bind(root) } = {}) {
+    const base = server.replace(/\/+$/u, '');
+    return {
+      async publish(topic, payload) {
+        const body = JSON.stringify(payload);
+        if (encoder.encode(body).length > MAX_MESSAGE_BYTES) throw new Error('Die Nachricht ist für den Vermittlungsdienst zu groß.');
+        const response = await fetchImpl(`${base}/${topic}`, { method: 'POST', body, signal: timeoutSignal(20000) });
+        if (!response.ok) throw new Error(`Der Vermittlungsdienst antwortet mit HTTP ${response.status}.`);
+      },
+      async recent(topic, since = '12h') {
+        const response = await fetchImpl(`${base}/${topic}/json?poll=1&since=${encodeURIComponent(since)}`, { signal: timeoutSignal(20000) });
+        if (!response.ok) throw new Error(`Der Vermittlungsdienst antwortet mit HTTP ${response.status}.`);
+        return parseEvents(await response.text()).map(payloadOf).filter(Boolean);
+      },
+      subscribe(topic, onMessage) {
+        const controller = new AbortController();
+        let closed = false;
+        let lastId = null;
+        let markReady;
+        let failReady;
+        const ready = new Promise((resolve, reject) => {
+          markReady = resolve;
+          failReady = reject;
+        });
+        ready.catch(() => {});
+        (async () => {
+          let failures = 0;
+          while (!closed) {
+            try {
+              const response = await fetchImpl(`${base}/${topic}/json${lastId ? `?since=${lastId}` : ''}`, { signal: controller.signal });
+              if (!response.ok || !response.body) throw new Error(`Der Vermittlungsdienst antwortet mit HTTP ${response.status}.`);
+              failures = 0;
+              const reader = response.body.getReader();
+              const streamDecoder = new TextDecoder();
+              let buffer = '';
+              for (;;) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                buffer += streamDecoder.decode(value, { stream: true });
+                const lines = buffer.split('\n');
+                buffer = lines.pop();
+                for (const event of parseEvents(lines.join('\n'))) {
+                  if (event.event === 'open') markReady();
+                  if (event.id && event.event === 'message') lastId = event.id;
+                  const payload = payloadOf(event);
+                  if (payload && !closed) onMessage(payload);
+                }
+              }
+            } catch (error) {
+              if (closed) return;
+              failures += 1;
+              if (failures >= 5) {
+                failReady(error);
+                return;
+              }
+              await new Promise((resolve) => setTimeout(resolve, 1500 * failures));
+            }
+          }
+        })();
+        return {
+          ready,
+          close() {
+            closed = true;
+            controller.abort();
+          },
+        };
+      },
+    };
+  }
+
+  // ---------------------------------------------------------------- Koppeln und Aufträge
+
+  /** Koppelt dieses Gerät über den 6-stelligen Code; onVerification bekommt die Prüfzahl. */
+  async function pairWithCode({ code: input, name, purpose = '', relay, onVerification = () => {}, timeoutMs = 5 * 60 * 1000 }) {
+    const code = normalizeCode(input);
+    if (!code) throw new Error('Der Code besteht aus 6 Ziffern.');
+    const topic = await pairingTopic(code);
+    const keyPair = newKeyPair();
+    const nonce = randomBytes(16);
+    const commit = toBase64Url(await commitment(keyPair.publicKey, nonce));
+    let key = null;
+    let finish;
+    let abort;
+    const outcome = new Promise((resolve, reject) => {
+      finish = resolve;
+      abort = reject;
+    });
+    outcome.catch(() => {});
+    // Die Nachrichten werden der Reihe nach verarbeitet, auch wenn das Rechnen dazwischen wartet.
+    let queue = Promise.resolve();
+    const handle = async (message) => {
+      if (message.from !== 'h' || message.v !== 1) return;
+      if (message.t === 'welcome' && message.commit === commit) {
+        const hostPublicKey = fromBase64Url(message.pk, 32);
+        const hostNonce = fromBase64Url(message.n, 16);
+        if (!hostPublicKey || !hostNonce) return;
+        if (key) {
+          if (!sameBytes(key.hostPublicKey, hostPublicKey)) abort(new Error('Die Kopplung wurde gestört. Erzeuge einen neuen Code und versuche es erneut.'));
+          return;
+        }
+        const session = await sessionKey({
+          shared: sharedSecret(keyPair.privateKey, hostPublicKey),
+          code,
+          clientPublicKey: keyPair.publicKey,
+          hostPublicKey,
+          clientNonce: nonce,
+          hostNonce,
+        });
+        key = { session, hostPublicKey };
+        await relay.publish(topic, {
+          v: 1, from: 'c', t: 'reveal',
+          pk: toBase64Url(keyPair.publicKey), n: toBase64Url(nonce),
+          box: await seal(session, { name: String(name || 'Browser').slice(0, 40), purpose }),
+        });
+        onVerification(await verificationNumber(session));
+        return;
+      }
+      if (message.t === 'deny' && key) abort(new Error('Die Anfrage wurde von unseren FelixServern abgelehnt.'));
+      if (message.t === 'grant' && key) {
+        try {
+          const grant = await open(key.session, message.box);
+          const linkKey = fromBase64Url(grant.linkKey, 32);
+          if (!linkKey || typeof grant.linkId !== 'string') return;
+          finish({ id: grant.linkId, key: linkKey, url: typeof grant.url === 'string' ? grant.url : null, host: String(grant.host || 'Bot') });
+        } catch {
+          // Eine Freigabe, die sich nicht entschlüsseln lässt, stammt nicht von unseren FelixServern.
+        }
+      }
+    };
+    const subscription = relay.subscribe(topic, (message) => {
+      queue = queue.then(() => handle(message)).catch(abort);
+    });
+    const timer = setTimeout(() => abort(new Error('Keine Antwort von unseren FelixServern. Ist der Code noch gültig?')), timeoutMs);
+    try {
+      await subscription.ready;
+      await relay.publish(topic, { v: 1, from: 'c', t: 'hello', commit });
+      return await outcome;
+    } finally {
+      clearTimeout(timer);
+      subscription.close();
+    }
+  }
+
+  class RemoteClient {
+    constructor({ link, relay, fetch: fetchImpl = root.fetch.bind(root), onUrl = () => {}, now = Date.now }) {
+      this.link = link;
+      this.relay = relay;
+      this.fetch = fetchImpl;
+      this.onUrl = onUrl;
+      this.now = now;
+    }
+
+    /** Holt die aktuelle Adresse des Tunnels; sie ändert sich, wenn der Fernzugriff neu startet. */
+    async refreshUrl() {
+      let latest = null;
+      for (const message of await this.relay.recent(await linkTopic(this.link.key))) {
+        try {
+          const announcement = await open(this.link.key, message.box);
+          if (typeof announcement.url === 'string' && (!latest || announcement.at > latest.at)) latest = announcement;
+        } catch {
+          // Fremde Nachrichten auf dem Thema werden übergangen.
+        }
+      }
+      if (!latest) return false;
+      const changed = latest.url !== this.link.url;
+      this.link.url = latest.url;
+      if (changed) this.onUrl(latest.url);
+      return changed;
+    }
+
+    async send(op, args) {
+      const unreachable = (message) => Object.assign(new Error(message), { unreachable: true });
+      if (!this.link.url) throw unreachable('Adresse unbekannt');
+      const body = await sealBytes(this.link.key, encoder.encode(JSON.stringify({ op, args, ts: this.now(), id: toBase64Url(randomBytes(12)) })));
+      let response;
+      try {
+        response = await this.fetch(`${this.link.url}/rpc`, {
+          method: 'POST',
+          headers: { 'content-type': 'application/octet-stream', 'x-fxs-link': this.link.id },
+          body,
+          signal: timeoutSignal(120000),
+        });
+      } catch {
+        throw unreachable('Unsere FelixServer sind gerade nicht zu erreichen.');
+      }
+      if (response.status === 403) throw new Error('Dieses Gerät ist nicht mehr mit dem Bot verbunden. Kopple es neu.');
+      if (!response.ok) throw unreachable(`Unsere FelixServer sind gerade nicht zu erreichen (HTTP ${response.status}).`);
+      let answer;
+      try {
+        answer = JSON.parse(decoder.decode(await openBytes(this.link.key, new Uint8Array(await response.arrayBuffer()))));
+      } catch {
+        throw unreachable('Unsere FelixServer sind gerade nicht zu erreichen.');
+      }
+      if (!answer.ok) throw new Error(answer.error || 'Der Auftrag ist fehlgeschlagen.');
+      return answer.result;
+    }
+
+    async call(op, args = {}) {
+      try {
+        return await this.send(op, args);
+      } catch (error) {
+        if (!error.unreachable) throw error;
+        // Vielleicht hat der Tunnel inzwischen eine neue Adresse.
+        const refreshed = await this.refreshUrl().catch(() => false);
+        if (!refreshed) throw new Error('Unsere FelixServer sind gerade nicht zu erreichen.');
+        return this.send(op, args);
+      }
+    }
+  }
+
+  const api = {
+    RemoteClient, createRelay, fromBase64Url, linkTopic, newKeyPair, open, pairWithCode, pairingTopic, seal, sealBytes, openBytes,
+    sessionKey, sharedSecret, toBase64Url, verificationNumber, x25519,
+  };
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  else root.FelixRemote = api;
+}(typeof globalThis !== 'undefined' ? globalThis : this));
+
+</script>
+<script>
+'use strict';
+// Im Browser (ohne Desktop-Programm) steckt der Fernzugriff in dieser Seite selbst; build-web.js setzt ihn oben ein.
+const WEB = typeof FelixRemote !== 'undefined';
+const token = location.hash.slice(1);
+const app = document.getElementById('app');
+const IMAGE = ['png', 'jpg', 'jpeg', 'webp', 'gif'];
+const AUDIO = ['mp3', 'm4a', 'ogg', 'opus', 'aac', 'wav'];
+const VIDEO = ['mp4', 'webm'];
+const MIME = { png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', webp: 'image/webp', gif: 'image/gif', mp3: 'audio/mpeg', m4a: 'audio/mp4', ogg: 'audio/ogg', opus: 'audio/ogg', aac: 'audio/aac', wav: 'audio/wav', mp4: 'video/mp4', webm: 'video/webm' };
+const state = { tab: 'users', bots: [], bot: null, roots: [], root: 'code', path: [], notice: '' };
+let ended = false;
+let updateDismissed = false;
+
+function deviceName() {
+  const agent = navigator.userAgent;
+  if (/iPhone/u.test(agent)) return 'iPhone';
+  if (/iPad/u.test(agent)) return 'iPad';
+  if (/Android/u.test(agent)) return 'Android-Browser';
+  if (/Windows/u.test(agent)) return 'Windows-Browser';
+  if (/Macintosh/u.test(agent)) return 'Mac-Browser';
+  return 'Browser';
+}
+
+// Dieselben Aufrufe, die sonst das Desktop-Programm beantwortet; die Verbindung merkt sich der Browser selbst.
+const webBackend = WEB ? (() => {
+  const STORED = 'felix-remote-link';
+  const relay = FelixRemote.createRelay();
+  let link = null;
+  let client = null;
+  let pairing = { state: 'idle' };
+  const save = () => {
+    try {
+      localStorage.setItem(STORED, JSON.stringify({ id: link.id, key: FelixRemote.toBase64Url(link.key), url: link.url, host: link.host }));
+    } catch {
+      // Im privaten Modus merkt sich der Browser nichts; die Verbindung gilt dann bis zum Schließen der Seite.
+    }
+  };
+  const connect = () => {
+    client = link ? new FelixRemote.RemoteClient({ link, relay, onUrl: save }) : null;
+  };
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORED));
+    const key = FelixRemote.fromBase64Url(saved.key, 32);
+    if (key && typeof saved.id === 'string') link = { id: saved.id, key, url: typeof saved.url === 'string' ? saved.url : null, host: String(saved.host || 'Bot') };
+  } catch {
+    // Noch nie verbunden.
+  }
+  connect();
+  return async (route, body) => {
+    if (route === '/api/state') return { ok: true, linked: Boolean(link), host: link ? link.host : '', pairing, update: null };
+    if (route === '/api/pair') {
+      if (pairing.state !== 'waiting') {
+        const attempt = { state: 'waiting', sas: null };
+        pairing = attempt;
+        FelixRemote.pairWithCode({ code: body.code, name: deviceName(), relay, onVerification: (sas) => { attempt.sas = sas; } }).then((granted) => {
+          link = granted;
+          save();
+          connect();
+          pairing = { state: 'idle' };
+        }, (error) => {
+          pairing = { state: 'error', error: error.message };
+        });
+      }
+      return { ok: true, pairing };
+    }
+    if (route === '/api/unlink') {
+      link = null;
+      client = null;
+      pairing = { state: 'idle' };
+      try {
+        localStorage.removeItem(STORED);
+      } catch {
+        // Nichts gespeichert.
+      }
+      return { ok: true };
+    }
+    if (route === '/api/rpc') {
+      if (!client) throw new Error('Dieses Gerät ist noch mit keinem Bot verbunden.');
+      return { ok: true, result: await client.call(String(body.op), body.args && typeof body.args === 'object' ? body.args : {}) };
+    }
+    throw new Error('Das geht nur im Desktop-Programm.');
+  };
+})() : null;
+
+if (WEB) {
+  document.documentElement.classList.add('web');
+  document.title = 'Remote FelixBot';
+  document.querySelector('header h1').textContent = 'REMOTE FELIXBOT';
+  document.getElementById('quit').hidden = true;
+}
+
+// Namen von Nutzern und Dateien stammen von außen; sie werden nur als Text eingesetzt, nie als HTML.
+function h(tag, props, ...children) {
+  const node = document.createElement(tag);
+  for (const [key, value] of Object.entries(props || {})) {
+    if (key === 'class') node.className = value;
+    else if (key.startsWith('on')) node.addEventListener(key.slice(2), value);
+    else if (value !== false && value !== null && value !== undefined) node[key] = value;
+  }
+  for (const child of children.flat()) {
+    if (child === null || child === undefined || child === false) continue;
+    node.append(child instanceof Node ? child : document.createTextNode(String(child)));
+  }
+  return node;
+}
+
+async function post(route, body) {
+  if (webBackend) return webBackend(route, body || {});
+  const response = await fetch(route, { method: 'POST', headers: { 'content-type': 'application/json', 'x-token': token }, body: JSON.stringify(body || {}) });
+  const answer = await response.json().catch(() => ({ ok: false, error: 'Das Desktop-Programm antwortet nicht.' }));
+  if (!answer.ok) throw new Error(answer.error || 'Das hat nicht geklappt.');
+  return answer;
+}
+const rpc = async (op, args) => (await post('/api/rpc', { op, args })).result;
+const extension = (name) => (name.includes('.') ? name.split('.').pop().toLowerCase() : '');
+const sizeText = (bytes) => (bytes < 1024 ? `${bytes} B` : bytes < 1048576 ? `${(bytes / 1024).toFixed(1)} KB` : `${(bytes / 1048576).toFixed(1)} MB`);
+
+function toBase64(bytes) {
+  let binary = '';
+  for (let index = 0; index < bytes.length; index += 0x8000) binary += String.fromCharCode.apply(null, bytes.subarray(index, index + 0x8000));
+  return btoa(binary);
+}
+function fromBase64(text) {
+  const binary = atob(text);
+  const bytes = new Uint8Array(binary.length);
+  for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+  return bytes;
+}
+function show(...nodes) { app.replaceChildren(...nodes.flat().filter(Boolean)); }
+function failure(error) { return h('p', { class: 'error' }, error.message); }
+
+// ------------------------------------------------------------------ Verbinden
+
+async function start() {
+  if (ended) return;
+  const info = await post('/api/state');
+  if (info.update && !updateDismissed) return showUpdate(info.update);
+  document.getElementById('host').textContent = info.linked ? `Verbunden mit ${info.host}` : '';
+  document.getElementById('unlink').hidden = !info.linked;
+  if (info.linked) return showMain();
+  if (info.pairing.state === 'waiting') return showWaiting(info.pairing);
+  return showPairing(info.pairing.state === 'error' ? info.pairing.error : '');
+}
+
+function showUpdate(update) {
+  const loading = typeof update.progress === 'number';
+  const proceed = () => {
+    updateDismissed = true;
+    start();
+  };
+  show(h('div', { class: 'card center' },
+    h('h2', {}, update.message ? 'Update' : 'Update verfügbar'),
+    h('p', { class: 'dim' }, `Version ${update.version}${update.notes ? ` – ${update.notes}` : ''}`),
+    update.message ? h('p', { class: 'ok' }, update.message) : null,
+    update.error ? h('p', { class: 'error' }, update.error) : null,
+    loading ? [h('p', {}, h('progress', { max: 1, value: update.progress })), h('p', { class: 'dim' }, `${Math.round(update.progress * 100)} % geladen …`)] : null,
+    !loading && !update.message ? h('p', { class: 'row', style: 'justify-content:center' },
+      h('button', {
+        class: 'primary',
+        onclick: async () => {
+          try {
+            await post('/api/update');
+          } catch (problem) {
+            update.error = problem.message;
+          }
+          start();
+        },
+      }, 'Update'),
+      h('button', { onclick: proceed }, 'Später')) : null,
+    update.message ? h('p', {}, h('button', { onclick: proceed }, 'Weiter')) : null));
+  if (loading) setTimeout(() => start().catch(() => {}), 700);
+}
+
+function showPairing(error) {
+  const input = h('input', { class: 'code-input', inputMode: 'numeric', maxLength: 7, placeholder: '000000', autofocus: true });
+  const submit = async () => {
+    try {
+      await post('/api/pair', { code: input.value });
+      setTimeout(start, 400);
+    } catch (problem) {
+      showPairing(problem.message);
+    }
+  };
+  input.addEventListener('keydown', (event) => { if (event.key === 'Enter') submit(); });
+  show(h('div', { class: 'card center' },
+    h('h2', {}, 'Mit dem Bot verbinden'),
+    h('p', { class: 'dim' }, 'Öffne auf dem Handy die App, schalte unter „Gerät“ den Fernzugriff ein und tippe auf „Code erzeugen“. Auf dem Bot-PC zeigt der Start den Code im Fenster, oder du schickst dem Bot in WhatsApp /remote. Handy und PC müssen nicht im selben WLAN sein.'),
+    h('p', {}, input),
+    h('p', {}, h('button', { class: 'primary', onclick: submit }, 'Verbinden')),
+    error ? h('p', { class: 'error' }, error) : null));
+  input.focus();
+}
+
+function showWaiting(pairing) {
+  show(h('div', { class: 'card center' },
+    h('h2', {}, pairing.sas ? 'Prüfzahl vergleichen' : 'FelixServer wird gesucht …'),
+    pairing.sas ? h('p', { class: 'sas' }, pairing.sas) : null,
+    h('p', { class: 'dim' }, pairing.sas
+      ? 'Beim Felix-Bot erscheint jetzt eine Anfrage mit einer Prüfzahl. Ist es dieselbe Zahl wie hier, tippe dort auf „Erlauben“ (in WhatsApp: /remote ja). Bei einer anderen Zahl: ablehnen.'
+      : 'Das dauert einige Sekunden.')));
+  setTimeout(start, 1200);
+}
+
+document.getElementById('unlink').addEventListener('click', async () => {
+  if (!confirm('Verbindung zu diesem Bot trennen? Zum erneuten Verbinden brauchst du einen neuen Code.')) return;
+  await post('/api/unlink');
+  start();
+});
+
+document.getElementById('quit').addEventListener('click', async () => {
+  if (!confirm('Programm beenden? Die Verbindung zum Bot bleibt gespeichert.')) return;
+  await post('/api/quit').catch(() => {});
+  ended = true;
+  document.getElementById('unlink').hidden = true;
+  document.getElementById('quit').hidden = true;
+  document.getElementById('host').textContent = '';
+  show(h('div', { class: 'card center' },
+    h('h2', {}, 'Programm beendet'),
+    h('p', { class: 'dim' }, 'Du kannst diesen Tab schließen. Zum Weitermachen startest du FELIXONTHEBEATS STUDIO Desktop neu.')));
+});
+
+// ------------------------------------------------------------------ Hauptansicht
+
+async function showMain() {
+  show(h('p', { class: 'dim' }, 'FelixServer wird kontaktiert …'));
+  try {
+    const info = await rpc('info');
+    state.bots = info.bots;
+    if (!state.bots.some((bot) => bot.id === state.bot)) state.bot = state.bots[0]?.id || null;
+    state.roots = (await rpc('files.roots')).roots;
+  } catch (error) {
+    show(h('div', { class: 'card' }, failure(error), h('p', {}, h('button', { onclick: showMain }, 'Erneut versuchen'))));
+    return;
+  }
+  render();
+}
+
+function botBar() {
+  return h('div', { class: 'card' }, state.bots.map((bot) => h('div', { class: 'row' },
+    h('strong', {}, bot.name),
+    h('span', { class: 'dim grow' }, bot.status || ''),
+    ['start', 'stop', 'restart'].map((action) => h('button', {
+      onclick: async (event) => {
+        event.target.disabled = true;
+        try {
+          await rpc('bot.control', { bot: bot.id, action });
+          state.notice = `${bot.name}: ${{ start: 'Start', stop: 'Stopp', restart: 'Neustart' }[action]} ausgelöst.`;
+        } catch (error) {
+          state.notice = error.message;
+        }
+        setTimeout(showMain, 2500);
+      },
+    }, { start: 'Starten', stop: 'Stoppen', restart: 'Neu starten' }[action])))),
+  state.notice ? h('p', { class: 'dim' }, state.notice) : null);
+}
+
+function render() {
+  const tabs = h('div', { class: 'tabs' }, [['users', 'Nutzer'], ['files', 'Dateien']].map(([id, label]) => h('button', {
+    class: state.tab === id ? 'active' : '',
+    onclick: () => { state.tab = id; render(); },
+  }, label)));
+  const body = h('div', {});
+  show(botBar(), tabs, body);
+  (state.tab === 'users' ? renderUsers : renderFiles)(body);
+}
+
+// ------------------------------------------------------------------ Nutzer
+
+async function renderUsers(body) {
+  body.replaceChildren(h('p', { class: 'dim' }, 'Nutzer werden geladen …'));
+  let users;
+  try {
+    users = (await rpc('users.list', { bot: state.bot })).users;
+  } catch (error) {
+    body.replaceChildren(failure(error));
+    return;
+  }
+  const search = h('input', { placeholder: 'Suchen: Name oder Nummer', class: 'grow' });
+  const rows = h('tbody', {});
+  const message = h('p', { class: 'dim' });
+  const selector = state.bots.length > 1 ? h('select', { onchange: (event) => { state.bot = event.target.value; render(); } },
+    state.bots.map((bot) => h('option', { value: bot.id, selected: bot.id === state.bot }, bot.name))) : null;
+  const fill = () => {
+    const needle = search.value.trim().toLowerCase();
+    const shown = users.filter((user) => !needle || `${user.name} ${user.number} ${user.jid}`.toLowerCase().includes(needle));
+    rows.replaceChildren(...shown.map((user) => h('tr', {},
+      h('td', {}, user.name || h('span', { class: 'dim' }, 'nicht registriert')),
+      h('td', {}, user.number ? `+${user.number}` : h('span', { class: 'dim' }, user.jid)),
+      h('td', {}, user.registered ? `🔥 ${user.flames}` : ''),
+      h('td', {}, h('span', { class: `badge ${user.banned ? 'banned' : 'active'}` }, user.banned ? 'Gebannt' : 'Aktiv'), user.reason ? h('span', { class: 'dim' }, ` ${user.reason}`) : null),
+      h('td', {}, h('button', {
+        class: user.banned ? '' : 'danger',
+        onclick: async (event) => {
+          let reason = '';
+          if (!user.banned) {
+            reason = prompt(`Grund für den Bann von ${user.name || user.jid} (darf leer bleiben):`, '');
+            if (reason === null) return;
+          }
+          event.target.disabled = true;
+          try {
+            await rpc(user.banned ? 'users.unban' : 'users.ban', { bot: state.bot, jid: user.jid, reason });
+            renderUsers(body);
+          } catch (error) {
+            message.className = 'error';
+            message.textContent = error.message;
+            event.target.disabled = false;
+          }
+        },
+      }, user.banned ? 'Entbannen' : 'Bannen')))));
+    message.className = 'dim';
+    message.textContent = `${shown.length} von ${users.length} Nutzern, davon ${users.filter((user) => user.banned).length} gebannt.`;
+  };
+  search.addEventListener('input', fill);
+  body.replaceChildren(h('div', { class: 'card' },
+    h('div', { class: 'row' }, selector, search, h('button', { onclick: () => renderUsers(body) }, 'Aktualisieren')),
+    h('table', {}, h('thead', {}, h('tr', {}, ['Name', 'Nummer', 'Flammen', 'Status', ''].map((title) => h('th', {}, title)))), rows),
+    message));
+  fill();
+}
+
+// ------------------------------------------------------------------ Dateien
+
+function filePath(name) { return [...state.path, name].join('/'); }
+
+async function renderFiles(body) {
+  body.replaceChildren(h('p', { class: 'dim' }, 'Ordner wird geladen …'));
+  let entries;
+  try {
+    entries = (await rpc('files.list', { root: state.root, path: state.path.join('/') })).entries;
+  } catch (error) {
+    body.replaceChildren(failure(error));
+    return;
+  }
+  const message = h('p', { class: 'dim' }, state.root === 'code' ? 'Nach einer Änderung am Code: Bot oben neu starten, damit sie wirkt.' : '');
+  const upload = h('input', { type: 'file', hidden: true, multiple: true });
+  upload.addEventListener('change', async () => {
+    try {
+      for (const file of upload.files) {
+        if (file.size > 30 * 1024 * 1024) throw new Error(`${file.name} ist größer als 30 MB.`);
+        message.textContent = `${file.name} wird hochgeladen …`;
+        await rpc('files.write', { root: state.root, path: filePath(file.name), data: toBase64(new Uint8Array(await file.arrayBuffer())) });
+      }
+      renderFiles(body);
+    } catch (error) {
+      message.className = 'error';
+      message.textContent = error.message;
+    }
+  });
+  const crumbs = h('span', { class: 'crumbs grow' },
+    h('button', { onclick: () => { state.path = []; renderFiles(body); } }, state.roots.find((root) => root.id === state.root)?.label || 'Ordner'),
+    state.path.map((part, index) => [' / ', h('button', { onclick: () => { state.path = state.path.slice(0, index + 1); renderFiles(body); } }, part)]));
+  body.replaceChildren(h('div', { class: 'card' },
+    h('div', { class: 'row' },
+      h('select', { onchange: (event) => { state.root = event.target.value; state.path = []; renderFiles(body); } },
+        state.roots.map((root) => h('option', { value: root.id, selected: root.id === state.root }, root.label))),
+      crumbs,
+      h('button', { onclick: () => upload.click() }, 'Datei hochladen …'),
+      h('button', {
+        onclick: async () => {
+          const name = prompt('Name des neuen Ordners:', '');
+          if (!name) return;
+          try {
+            await rpc('files.mkdir', { root: state.root, path: filePath(name) });
+            renderFiles(body);
+          } catch (error) {
+            message.className = 'error';
+            message.textContent = error.message;
+          }
+        },
+      }, 'Neuer Ordner'),
+      upload),
+    h('table', {}, h('thead', {}, h('tr', {}, ['Name', 'Größe', 'Geändert'].map((title) => h('th', {}, title)))),
+      h('tbody', {},
+        state.path.length ? h('tr', { class: 'entry', onclick: () => { state.path.pop(); renderFiles(body); } }, h('td', { colSpan: 3 }, '⬆ Übergeordneter Ordner')) : null,
+        entries.map((entry) => h('tr', {
+          class: 'entry',
+          onclick: () => {
+            if (entry.dir) {
+              state.path.push(entry.name);
+              renderFiles(body);
+            } else {
+              openFile(body, entry);
+            }
+          },
+        }, h('td', {}, `${entry.dir ? '📁' : '📄'} ${entry.name}`), h('td', {}, entry.dir ? '' : sizeText(entry.size)), h('td', { class: 'dim' }, new Date(entry.modified).toLocaleString('de-DE')))),
+        entries.length ? null : h('tr', {}, h('td', { colSpan: 3, class: 'dim' }, 'Dieser Ordner ist leer.')))),
+    message));
+}
+
+async function openFile(body, entry) {
+  body.replaceChildren(h('p', { class: 'dim' }, `${entry.name} wird geladen …`));
+  const target = { root: state.root, path: filePath(entry.name) };
+  let bytes;
+  try {
+    bytes = fromBase64((await rpc('files.read', target)).data);
+  } catch (error) {
+    body.replaceChildren(failure(error), h('p', {}, h('button', { onclick: () => renderFiles(body) }, 'Zurück')));
+    return;
+  }
+  const kind = extension(entry.name);
+  const message = h('p', { class: 'dim' }, sizeText(bytes.length));
+  const blobUrl = () => URL.createObjectURL(new Blob([bytes], { type: MIME[kind] || 'application/octet-stream' }));
+  let view;
+  let save = null;
+  if (entry.text && bytes.length <= 1024 * 1024) {
+    const editor = h('textarea', { spellcheck: false, value: new TextDecoder().decode(bytes) });
+    view = editor;
+    save = h('button', {
+      class: 'primary',
+      onclick: async () => {
+        try {
+          await rpc('files.write', { ...target, data: toBase64(new TextEncoder().encode(editor.value)) });
+          message.className = 'ok';
+          message.textContent = `Gespeichert um ${new Date().toLocaleTimeString('de-DE')}.${state.root === 'code' ? ' Starte den Bot neu, damit die Änderung wirkt.' : ''}`;
+        } catch (error) {
+          message.className = 'error';
+          message.textContent = error.message;
+        }
+      },
+    }, 'Speichern');
+  } else if (IMAGE.includes(kind)) view = h('img', { class: 'preview', src: blobUrl(), alt: entry.name });
+  else if (AUDIO.includes(kind)) view = h('audio', { controls: true, src: blobUrl() });
+  else if (VIDEO.includes(kind)) view = h('video', { class: 'preview', controls: true, src: blobUrl() });
+  else view = h('p', { class: 'dim' }, 'Für diese Datei gibt es keine Vorschau. Du kannst sie herunterladen oder ersetzen.');
+
+  const replace = h('input', { type: 'file', hidden: true });
+  replace.addEventListener('change', async () => {
+    const [file] = replace.files;
+    if (!file) return;
+    try {
+      if (file.size > 30 * 1024 * 1024) throw new Error('Die Datei ist größer als 30 MB.');
+      await rpc('files.write', { ...target, data: toBase64(new Uint8Array(await file.arrayBuffer())) });
+      openFile(body, entry);
+    } catch (error) {
+      message.className = 'error';
+      message.textContent = error.message;
+    }
+  });
+  body.replaceChildren(h('div', { class: 'card' },
+    h('div', { class: 'row' },
+      h('button', { onclick: () => renderFiles(body) }, '← Zurück'),
+      h('strong', { class: 'grow' }, target.path),
+      save,
+      h('a', { download: entry.name, href: blobUrl() }, h('button', {}, 'Herunterladen')),
+      h('button', { onclick: () => replace.click() }, 'Ersetzen …'),
+      h('button', {
+        class: 'danger',
+        onclick: async () => {
+          if (!confirm(`${entry.name} wirklich löschen?`)) return;
+          try {
+            await rpc('files.delete', target);
+            renderFiles(body);
+          } catch (error) {
+            message.className = 'error';
+            message.textContent = error.message;
+          }
+        },
+      }, 'Löschen'),
+      replace),
+    h('p', {}, view),
+    message));
+}
+
+start().catch((error) => show(failure(error)));
+</script>
+</body>
+</html>
