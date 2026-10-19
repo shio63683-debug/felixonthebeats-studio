@@ -40,6 +40,13 @@
   ],
   "inselschlacht": [
     {
+      "version": "1.1.2.27",
+      "date": "19.10.2026",
+      "items": [
+        "Veraltete FelixServer-Lobby-Schnittstellen werden als erforderliches Server-Backend-Update gemeldet statt fälschlich ein App-Update zu verlangen."
+      ]
+    },
+    {
       "version": "1.1.2.26",
       "date": "19.10.2026",
       "items": [
