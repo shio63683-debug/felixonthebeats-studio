@@ -40,6 +40,17 @@
   ],
   "inselschlacht": [
     {
+      "version": "1.1.2.26",
+      "date": "19.10.2026",
+      "items": [
+        "Online-Solo-Matchmaking und private Freundes-Lobbys mit Einladungscode über FelixServer.",
+        "Online-Lobby-Relay mit authentifizierten Felix-Konten; Lobbys laufen im FelixServer-Prozess und werden beim Neustart beendet.",
+        "Android-Menü auf Online-Spiel, Freundeseinladung, Profil und Münzen fokussiert; Offline-/LAN-Einstiege entfernt.",
+        "Android-Mindestversion auf Android 14 (API 34) angehoben; kein künstlicher Versionsdeckel.",
+        "Die Partie-Simulation läuft weiterhin auf dem Lobby-Host und ist nicht serverautoritativ."
+      ]
+    },
+    {
       "version": "1.1.2.25",
       "date": "19.10.2026",
       "items": [
