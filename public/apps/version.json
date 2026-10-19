@@ -6,9 +6,11 @@
   "size": 24419168,
   "notes": "FelixServer 1.5.6 mit Inselschlacht 1.1.2.25 und Felix Musik 1.0.0",
   "remote": {
-    "versionCode": 13,
-    "versionName": "1.2.1",
-    "availability": "temporarily_unavailable"
+    "versionCode": 14,
+    "versionName": "1.2.2",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/current.apk",
+    "sha256": "857012d7e7da737e3fe274ce190736d395d370b18dc426e92dd04be88a639a78",
+    "size": 15299016
   },
   "samsung": {
     "versionCode": 36,
@@ -33,11 +35,11 @@
     "size": 6901070
   },
   "accountManager": {
-    "versionCode": 15,
-    "versionName": "2.1.6",
+    "versionCode": 16,
+    "versionName": "2.1.7",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
-    "sha256": "5a67bd8d9229835bf472eda5db93be8e69cf71bbaeef0a1812b2dcbfed817ded",
-    "size": 6992004
+    "sha256": "2e4d50defaea9412458c0ad7867c0b393f68f4ebd836109429b3464560357f18",
+    "size": 6992000
   },
   "browser": {
     "versionCode": 12,
