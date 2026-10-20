@@ -70,12 +70,28 @@
   ],
   "music": [
     {
+      "version": "1.0.1",
+      "date": "20.10.2026",
+      "items": [
+        "Verbindungsfehler nach einem veralteten FelixServer-Link behoben."
+      ]
+    },
+    {
       "version": "1.0.0",
       "date": "19.10.2026",
       "items": [
         "Erste FelixOnTheBeats-Musik-App mit FelixServer-Anmeldung und Live-Musikkatalog.",
         "Musiktitel können verschlüsselt auf dem Gerät gespeichert und offline abgespielt werden.",
         "Hintergrundwiedergabe mit Pause- und Stopp-Steuerung über die Benachrichtigung."
+      ]
+    }
+  ],
+  "whochat": [
+    {
+      "version": "1.0.1",
+      "date": "20.10.2026",
+      "items": [
+        "Verbindungsfehler nach einem veralteten FelixServer-Link behoben."
       ]
     }
   ],
@@ -300,6 +316,13 @@
     }
   ],
   "server": [
+    {
+      "version": "1.5.7",
+      "date": "20.10.2026",
+      "items": [
+        "Ein gespeicherter FelixServer-Link wird jetzt auf echte Erreichbarkeit geprüft und bei Bedarf automatisch erneuert."
+      ]
+    },
     {
       "version": "1.5.5",
       "date": "18.10.2026",
