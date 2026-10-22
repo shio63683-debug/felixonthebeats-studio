@@ -28,11 +28,11 @@
     "size": 7453964
   },
   "server": {
-    "versionCode": 16,
-    "versionName": "1.5.6",
-    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/current.apk",
-    "sha256": "8cb8077f53307c7582ba4e1e5579d51e8f321b854aa8f8947fbfea034c206e0e",
-    "size": 6901070
+    "versionCode": 17,
+    "versionName": "1.5.7",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/bc436f0b48118c882eff3e717f38cb9ec3427930/public/apps/felix-server/current.apk",
+    "sha256": "c2fa259b0f6014997f295b2488166c8e50d5208d5b3eba95ef7bbffe4550f926",
+    "size": 6901066
   },
   "accountManager": {
     "versionCode": 16,
@@ -70,11 +70,11 @@
     "size": 6755812
   },
   "whochat": {
-    "versionCode": 1,
-    "versionName": "1.0.0",
+    "versionCode": 2,
+    "versionName": "1.0.1",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/current.apk",
-    "sha256": "0eaeeec912fdeafe8972812475b59a9d7c86783ac7ab1365a5af00351e920fed",
-    "size": 6734716
+    "sha256": "2cdc63ae20c4277efb908829b0db7fbb88dfd9fd1fd28bf6a56ee4173d33589b",
+    "size": 6734719
   },
   "music": {
     "versionCode": 3,
