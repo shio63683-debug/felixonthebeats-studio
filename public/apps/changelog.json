@@ -40,6 +40,15 @@
   ],
   "inselschlacht": [
     {
+      "version": "1.1.2.29",
+      "date": "20.10.2026",
+      "items": [
+        "Lobby an die Referenzen angelehnt: Spielnavigation oben, Profil und Statistiken links, Gruppenmitglieder in der Mitte, Spielmodus und Start rechts.",
+        "Freunde, Einladungscode, Emote-Vorschau und Einstellungen bleiben direkt aus der Online-Lobby erreichbar.",
+        "Nur Lobby-Oberfläche und Layout aktualisiert; FelixServer-Backend-Kompatibilität bleibt erforderlich."
+      ]
+    },
+    {
       "version": "1.1.2.27",
       "date": "19.10.2026",
       "items": [
@@ -91,7 +100,17 @@
       "version": "1.0.1",
       "date": "20.10.2026",
       "items": [
-        "Verbindungsfehler nach einem veralteten FelixServer-Link behoben."
+        "Verbindungsfehler nach einem veralteten FelixServer-Link behoben.",
+        "Chat-Oberfläche im hellen WhatsApp-inspirierten Design überarbeitet."
+      ]
+    }
+  ],
+  "server": [
+    {
+      "version": "1.5.7",
+      "date": "20.10.2026",
+      "items": [
+        "Der Verbindungsstatus prüft jetzt die tatsächliche Erreichbarkeit des FelixServers."
       ]
     }
   ],
@@ -176,6 +195,13 @@
     }
   ],
   "store": [
+    {
+      "version": "1.10.3",
+      "date": "20.10.2026",
+      "items": [
+        "Die Standard- und Samsung-Version von FELIXONTHEBEATS STUDIO werden wieder im FelixStore angezeigt."
+      ]
+    },
     {
       "version": "1.10.2",
       "date": "18.10.2026",
