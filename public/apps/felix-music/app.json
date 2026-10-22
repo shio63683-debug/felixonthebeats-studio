@@ -14,10 +14,10 @@
   "nativeAbi": "any",
   "downloadManifestKey": "music",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-music/current.apk",
-  "apkSize": 6696912,
-  "sha256": "fc67675df730481a11e86d1750e0d31aba127f7a5bf597a861c523cca54a16a9",
-  "versionCode": 1,
-  "versionName": "1.0.0",
+  "apkSize": 6696915,
+  "sha256": "c98c760cbdb68008dfbb9751f8ade81b0958af8e8308e2062145b364af1f0bb2",
+  "versionCode": 3,
+  "versionName": "1.0.2",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-music/icon.png",
   "screenshots": []
 }
