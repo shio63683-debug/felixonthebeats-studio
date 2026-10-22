@@ -77,18 +77,18 @@
     "size": 6734716
   },
   "music": {
-    "versionCode": 1,
-    "versionName": "1.0.0",
+    "versionCode": 3,
+    "versionName": "1.0.2",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-music/current.apk",
-    "sha256": "fc67675df730481a11e86d1750e0d31aba127f7a5bf597a861c523cca54a16a9",
-    "size": 6696912
+    "sha256": "c98c760cbdb68008dfbb9751f8ade81b0958af8e8308e2062145b364af1f0bb2",
+    "size": 6696915
   },
   "inselschlacht": {
-    "versionCode": 1010229,
-    "versionName": "1.1.2.29",
+    "versionCode": 1010225,
+    "versionName": "1.1.2.25",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/current.apk",
-    "sha256": "f6fcd5960bde9358f9f6bc7c43fa6ef89214f1e41b060f3ab3afce7b86012d95",
-    "size": 19043404
+    "sha256": "548f5378680f02e94dbb58f4d9b87a4c4dd2bfa6a70edb3cbfd32425c4b8147a",
+    "size": 7401016
   },
   "desktop": {
     "version": "2.6.3",
