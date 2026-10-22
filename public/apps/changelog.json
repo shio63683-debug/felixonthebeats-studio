@@ -79,6 +79,14 @@
   ],
   "music": [
     {
+      "version": "1.0.2",
+      "date": "22.10.2026",
+      "items": [
+        "Online-Wiedergabe prüft den echten FelixServer-Link vor dem Laden des Musikkatalogs.",
+        "Abgelaufene oder nicht erreichbare Server-Verknüpfungen werden verständlich angezeigt; Offline-Titel bleiben verfügbar."
+      ]
+    },
+    {
       "version": "1.0.1",
       "date": "20.10.2026",
       "items": [
