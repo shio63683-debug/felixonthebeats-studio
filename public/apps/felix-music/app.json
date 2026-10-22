@@ -13,7 +13,7 @@
   "minRamMb": 1024,
   "nativeAbi": "any",
   "downloadManifestKey": "music",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-music/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/ed1eb4f1415dfcda4f85e8e42911b222e92bf56d/public/apps/felix-music/current.apk",
   "apkSize": 6696915,
   "sha256": "c98c760cbdb68008dfbb9751f8ade81b0958af8e8308e2062145b364af1f0bb2",
   "versionCode": 3,
