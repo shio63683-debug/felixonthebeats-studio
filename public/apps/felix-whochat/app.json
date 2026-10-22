@@ -9,15 +9,15 @@
   "packageName": "com.felixonthebeats.whochat",
   "category": "app",
   "genre": "Kommunikation",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0281fa124027d445a8f00e933b2ce3bd8e5c4ac0/public/apps/felix-whochat/current.apk",
   "minAndroid": 23,
   "minRamMb": 1024,
   "nativeAbi": "any",
-  "versionCode": 1,
-  "versionName": "1.0.0",
+  "versionCode": 2,
+  "versionName": "1.0.1",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/icon.png",
   "screenshots": [],
   "downloadManifestKey": "whochat",
-  "apkSize": 6734716,
-  "sha256": "0eaeeec912fdeafe8972812475b59a9d7c86783ac7ab1365a5af00351e920fed"
+  "apkSize": 6734719,
+  "sha256": "2cdc63ae20c4277efb908829b0db7fbb88dfd9fd1fd28bf6a56ee4173d33589b"
 }
