@@ -13,11 +13,11 @@
   "minRamMb": 2048,
   "nativeAbi": "any",
   "downloadManifestKey": "inselschlacht",
-  "versionCode": 1010227,
-  "versionName": "1.1.2.27",
+  "versionCode": 1010229,
+  "versionName": "1.1.2.29",
   "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/current.apk",
-  "apkSize": 19010784,
-  "sha256": "a68827a017b2137ae486f34fe1e0cf63c4e20df73168b47c2b3675fb0d356864",
+  "apkSize": 19043404,
+  "sha256": "f6fcd5960bde9358f9f6bc7c43fa6ef89214f1e41b060f3ab3afce7b86012d95",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/icon.png",
   "screenshots": []
 }
