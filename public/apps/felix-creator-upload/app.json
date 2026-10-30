@@ -14,10 +14,10 @@
   "minAndroid": 23,
   "minRamMb": 2048,
   "nativeAbi": "any",
-  "versionCode": 3,
-  "versionName": "1.1.1",
+  "versionCode": 4,
+  "versionName": "1.2.0",
   "iconUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-creator-upload/icon.png",
   "screenshots": [],
-  "apkSize": 6722922,
-  "sha256": "4f1f32a7bb0aa8a8de80133f4087d925bc5e70bbdc7fcde8f60474ae04e93afa"
+  "apkSize": 6755816,
+  "sha256": "d9462aeb4582db8bcee0a8722253d812f7c7a865dcf8261b40394a9ffbddf824"
 }

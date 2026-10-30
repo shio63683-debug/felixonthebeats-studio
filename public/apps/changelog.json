@@ -115,30 +115,141 @@
   ],
   "server": [
     {
+      "version": "1.6.0",
+      "date": "30.10.2026",
+      "items": [
+        "Komplett neues Design: Dashboard mit Status, Antwortzeit und Felix-Bot-Status.",
+        "Neue Schnellaktionen: Verbindung testen, neu verbinden, Felix-Konten öffnen, Was ist neu.",
+        "Server-Details (Server, Version, Antwortzeit, zuletzt geprüft) und neue Optionen: Felixstore öffnen, Verbindung trennen."
+      ]
+    },
+    {
       "version": "1.5.7",
       "date": "20.10.2026",
       "items": [
-        "Der Verbindungsstatus prüft jetzt die tatsächliche Erreichbarkeit des FelixServers."
+        "Ein gespeicherter FelixServer-Link wird jetzt auf echte Erreichbarkeit geprüft und bei Bedarf automatisch erneuert."
+      ]
+    },
+    {
+      "version": "1.5.5",
+      "date": "18.10.2026",
+      "items": [
+        "Neue Meldungen: Statt „Bot-Gerät“ oder „Bot-Server“ ist nur noch von unseren FelixServern die Rede.",
+        "Ohne Internet heißt es jetzt „Oh, es scheint, als wärst du offline“ – sonst „Unsere FelixServer sind gerade nicht zu erreichen“, mit „Nach Updates suchen“.",
+        "Gesperrte Konten sehen „Dein Konto wurde von FelixServer gesperrt“ und können per WhatsApp Widerspruch einlegen."
+      ]
+    },
+    {
+      "version": "1.5.4",
+      "date": "17.10.2026",
+      "items": [
+        "Neue Felix-Funktionen (Creator-Bilder, WhoChat, Flammen) brauchen kein FelixServer-Update mehr."
+      ]
+    },
+    {
+      "version": "1.5.3",
+      "date": "17.10.2026",
+      "items": [
+        "Behoben: Store-Owner-Prüfung, Zwei-Faktor-Anmeldung, Geräte abmelden, Creator-Upload und Creator-Postfach meldeten „Unbekannter FelixServer-Auftrag“ – FelixServer leitet diese Aufträge jetzt weiter."
+      ]
+    },
+    {
+      "version": "1.5.2",
+      "date": "17.10.2026",
+      "items": [
+        "Neu paketierte FelixServer-Ausgabe für den zentralen FelixStore-Katalog; keine zusätzlichen Server-Funktionen."
+      ]
+    },
+    {
+      "version": "1.5.1",
+      "date": "17.10.2026",
+      "items": [
+        "Fehlende Dienste und Updates öffnen den Felixstore statt GitHub.",
+        "„Was ist neu?“ in der App."
+      ]
+    },
+    {
+      "version": "1.5.0",
+      "date": "17.10.2026",
+      "items": [
+        "Anmeldung per WhatsApp-Code und Felix-Cloud werden durchgereicht."
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "17.10.2026",
+      "items": [
+        "Verbindet sich automatisch mit dem FelixServer – kein Code mehr nötig."
       ]
     }
   ],
   "browser": [
     {
-      "version": "1.5.3",
-      "date": "19.10.2026",
+      "version": "1.5.1",
+      "date": "18.10.2026",
       "items": [
-        "owner.org zeigt den Verbindungsstatus des separaten OTP-Zweitbots und erklärt die Einrichtung."
+        "Neue Meldungen: Statt „Bot-Gerät“ oder „Bot-Server“ ist nur noch von unseren FelixServern die Rede.",
+        "Ohne Internet heißt es jetzt „Oh, es scheint, als wärst du offline“ – sonst „Unsere FelixServer sind gerade nicht zu erreichen“, mit „Nach Updates suchen“.",
+        "Gesperrte Konten sehen „Dein Konto wurde von FelixServer gesperrt“ und können per WhatsApp Widerspruch einlegen."
       ]
     },
     {
-      "version": "1.5.2",
-      "date": "19.10.2026",
+      "version": "1.5.0",
+      "date": "17.10.2026",
       "items": [
-        "FLC-WEB wird mit den aktuellen Felix-App-Updates veröffentlicht."
+        "owner.org: Anmeldung nur noch mit dem Admin-Passwort – ohne Felix-Konto und ohne WhatsApp-Code.",
+        "Jede Anmeldung bei owner.org meldet der Hauptbot dem Betreiber per WhatsApp."
+      ]
+    },
+    {
+      "version": "1.4.1",
+      "date": "17.10.2026",
+      "items": [
+        "Neu paketierte FLC-WEB-Ausgabe für den zentralen FelixStore-Katalog; keine zusätzlichen Browser-Funktionen."
+      ]
+    },
+    {
+      "version": "1.4.0",
+      "date": "17.10.2026",
+      "items": [
+        "Fehlende Dienste und Updates öffnen den Felixstore statt GitHub.",
+        "„Was ist neu?“ im Menü."
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "17.10.2026",
+      "items": [
+        "Anmeldung per WhatsApp-Code und Kontoauswahl."
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "17.10.2026",
+      "items": [
+        "Tab-Vorschaubilder der zuletzt besuchten Seite; Tabs bleiben nach einem Neustart.",
+        "Felix-Shield blockiert fremde Weiterleitungen und Werbung.",
+        "Neue Seite owner.org (nur mit Admin-Passwort)."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "17.10.2026",
+      "items": [
+        "Brave-ähnlicher Aufbau mit Tabs, Verlauf, Werbeblocker, Tor/Proxy und felixserver.org."
       ]
     }
   ],
   "studio": [
+    {
+      "version": "2.6.4",
+      "date": "30.10.2026",
+      "items": [
+        "WLAN im 2,4-GHz-Band wird jetzt unterstützt – 5-GHz-WLAN ist nicht mehr nötig. Gilt für Standard, Samsung und Owner.",
+        "Die Geräteprüfung zeigt nur noch „WLAN oder mobile Daten“; das Band (2,4, 5 oder 6 GHz) steht weiter zur Info dabei.",
+        "Enthält den aktuellen Bot-Code."
+      ]
+    },
     {
       "version": "2.6.3",
       "date": "18.10.2026",
@@ -203,6 +314,16 @@
     }
   ],
   "store": [
+    {
+      "version": "1.11.0",
+      "date": "30.10.2026",
+      "items": [
+        "Neues Felix-Design in Violett statt Google-Play-Grün – wählbar: Automatisch, Hell oder Dunkel (Profilbild → „Design“).",
+        "Neuer Tab „Meine Apps“ mit Update-Zähler: Updates, installierte Apps und noch nicht installierte Apps auf einen Blick.",
+        "Startseite mit Banner („N Updates installieren“) und Karussell „Empfohlen für dich“.",
+        "Suche mit Filtern (Installiert, Updates, Apps, Spiele, Kompatibel) und Sortierung (Beliebt, A–Z, Kleinste zuerst)."
+      ]
+    },
     {
       "version": "1.10.3",
       "date": "20.10.2026",
@@ -349,68 +470,17 @@
       ]
     }
   ],
-  "server": [
-    {
-      "version": "1.5.7",
-      "date": "20.10.2026",
-      "items": [
-        "Ein gespeicherter FelixServer-Link wird jetzt auf echte Erreichbarkeit geprüft und bei Bedarf automatisch erneuert."
-      ]
-    },
-    {
-      "version": "1.5.5",
-      "date": "18.10.2026",
-      "items": [
-        "Neue Meldungen: Statt „Bot-Gerät“ oder „Bot-Server“ ist nur noch von unseren FelixServern die Rede.",
-        "Ohne Internet heißt es jetzt „Oh, es scheint, als wärst du offline“ – sonst „Unsere FelixServer sind gerade nicht zu erreichen“, mit „Nach Updates suchen“.",
-        "Gesperrte Konten sehen „Dein Konto wurde von FelixServer gesperrt“ und können per WhatsApp Widerspruch einlegen."
-      ]
-    },
-    {
-      "version": "1.5.4",
-      "date": "17.10.2026",
-      "items": [
-        "Neue Felix-Funktionen (Creator-Bilder, WhoChat, Flammen) brauchen kein FelixServer-Update mehr."
-      ]
-    },
-    {
-      "version": "1.5.3",
-      "date": "17.10.2026",
-      "items": [
-        "Behoben: Store-Owner-Prüfung, Zwei-Faktor-Anmeldung, Geräte abmelden, Creator-Upload und Creator-Postfach meldeten „Unbekannter FelixServer-Auftrag“ – FelixServer leitet diese Aufträge jetzt weiter."
-      ]
-    },
-    {
-      "version": "1.5.2",
-      "date": "17.10.2026",
-      "items": [
-        "Neu paketierte FelixServer-Ausgabe für den zentralen FelixStore-Katalog; keine zusätzlichen Server-Funktionen."
-      ]
-    },
-    {
-      "version": "1.5.1",
-      "date": "17.10.2026",
-      "items": [
-        "Fehlende Dienste und Updates öffnen den Felixstore statt GitHub.",
-        "„Was ist neu?“ in der App."
-      ]
-    },
-    {
-      "version": "1.5.0",
-      "date": "17.10.2026",
-      "items": [
-        "Anmeldung per WhatsApp-Code und Felix-Cloud werden durchgereicht."
-      ]
-    },
-    {
-      "version": "1.2.0",
-      "date": "17.10.2026",
-      "items": [
-        "Verbindet sich automatisch mit dem FelixServer – kein Code mehr nötig."
-      ]
-    }
-  ],
   "accountManager": [
+    {
+      "version": "2.2.0",
+      "date": "30.10.2026",
+      "items": [
+        "Komplett neues Design mit Farbverlauf, Schnellaktionen und modernen Kontokarten.",
+        "Neu: „Für alle Felix-Apps nutzen“ meldet alle installierten Felix-Apps mit einem Tipp beim gewählten Konto an.",
+        "Neu: Übersicht „Felix-Apps auf diesem Handy“ – welche App welches Konto nutzt, mit „Öffnen“.",
+        "Das Standardkonto ist markiert; der FelixServer-Status steht oben."
+      ]
+    },
     {
       "version": "2.1.7",
       "date": "19.10.2026",
@@ -470,63 +540,6 @@
       "items": [
         "Mehrere Felix-Konten wie bei Google, jede App merkt sich ihr Konto.",
         "Felix-Cloud: Fotos, Videos, Chats, Dateien und Backups auf dem Felix-PC oder nur lokal speichern."
-      ]
-    }
-  ],
-  "browser": [
-    {
-      "version": "1.5.1",
-      "date": "18.10.2026",
-      "items": [
-        "Neue Meldungen: Statt „Bot-Gerät“ oder „Bot-Server“ ist nur noch von unseren FelixServern die Rede.",
-        "Ohne Internet heißt es jetzt „Oh, es scheint, als wärst du offline“ – sonst „Unsere FelixServer sind gerade nicht zu erreichen“, mit „Nach Updates suchen“.",
-        "Gesperrte Konten sehen „Dein Konto wurde von FelixServer gesperrt“ und können per WhatsApp Widerspruch einlegen."
-      ]
-    },
-    {
-      "version": "1.5.0",
-      "date": "17.10.2026",
-      "items": [
-        "owner.org: Anmeldung nur noch mit dem Admin-Passwort – ohne Felix-Konto und ohne WhatsApp-Code.",
-        "Jede Anmeldung bei owner.org meldet der Hauptbot dem Betreiber per WhatsApp."
-      ]
-    },
-    {
-      "version": "1.4.1",
-      "date": "17.10.2026",
-      "items": [
-        "Neu paketierte FLC-WEB-Ausgabe für den zentralen FelixStore-Katalog; keine zusätzlichen Browser-Funktionen."
-      ]
-    },
-    {
-      "version": "1.4.0",
-      "date": "17.10.2026",
-      "items": [
-        "Fehlende Dienste und Updates öffnen den Felixstore statt GitHub.",
-        "„Was ist neu?“ im Menü."
-      ]
-    },
-    {
-      "version": "1.3.0",
-      "date": "17.10.2026",
-      "items": [
-        "Anmeldung per WhatsApp-Code und Kontoauswahl."
-      ]
-    },
-    {
-      "version": "1.2.0",
-      "date": "17.10.2026",
-      "items": [
-        "Tab-Vorschaubilder der zuletzt besuchten Seite; Tabs bleiben nach einem Neustart.",
-        "Felix-Shield blockiert fremde Weiterleitungen und Werbung.",
-        "Neue Seite owner.org (nur mit Admin-Passwort)."
-      ]
-    },
-    {
-      "version": "1.1.0",
-      "date": "17.10.2026",
-      "items": [
-        "Brave-ähnlicher Aufbau mit Tabs, Verlauf, Werbeblocker, Tor/Proxy und felixserver.org."
       ]
     }
   ],
@@ -659,6 +672,16 @@
     }
   ],
   "creatorUpload": [
+    {
+      "version": "1.2.0",
+      "date": "30.10.2026",
+      "items": [
+        "Neu: Apps direkt vom Handy hochladen – „Vom Handy wählen“ übernimmt eine installierte App, ganz ohne APK-Datei.",
+        "Neu: Auto-Update im Hintergrund – aktualisierst du eine deiner veröffentlichten Apps auf dem Handy, wird die neue Version automatisch eingereicht (stündlich und beim Öffnen geprüft, abschaltbar).",
+        "„Meine Apps“ zeigt, wenn auf dem Handy eine neuere Version installiert ist, und lädt sie mit einem Tipp hoch.",
+        "Updates übernehmen Name, Beschreibung, Bilder und Kategorie automatisch aus der letzten Einreichung."
+      ]
+    },
     {
       "version": "1.1.1",
       "date": "18.10.2026",

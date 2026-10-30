@@ -1,45 +1,46 @@
 {
-  "versionCode": 36,
-  "versionName": "2.6.3",
+  "versionCode": 37,
+  "versionName": "2.6.4",
   "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
-  "sha256": "7468cfec71f3ab415247e2213f645b71620ebcf392325a763553116ec35cd8aa",
-  "size": 24419168,
-  "notes": "FelixServer 1.5.6 mit Inselschlacht 1.1.2.25 und Felix Musik 1.0.0",
+  "sha256": "3fca18e8c8386385e589948d5250212f3adeea54447be2aabdbb60a616f49987",
+  "size": 24467196,
+  "notes": "Studio 2.6.4: 2,4-GHz-WLAN wird unterstützt (Standard, Samsung, Owner). Felixstore 1.11.0, FelixServer 1.6.0 und FelixAccountManager 2.2.0: neues modernes Design mit mehr Optionen. Felix Creator Upload 1.2.0: Apps direkt vom Handy hochladen und Auto-Update im Hintergrund.",
   "remote": {
     "versionCode": 14,
     "versionName": "1.2.2",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/remote-felixbot/current.apk",
     "sha256": "857012d7e7da737e3fe274ce190736d395d370b18dc426e92dd04be88a639a78",
-    "size": 15299016
+    "size": 15299016,
+    "notes": "Studio 2.6.4: 2,4-GHz-WLAN wird unterstützt (Standard, Samsung, Owner). Felixstore 1.11.0, FelixServer 1.6.0 und FelixAccountManager 2.2.0: neues modernes Design mit mehr Optionen. Felix Creator Upload 1.2.0: Apps direkt vom Handy hochladen und Auto-Update im Hintergrund."
   },
   "samsung": {
-    "versionCode": 36,
-    "versionName": "2.6.3",
+    "versionCode": 37,
+    "versionName": "2.6.4",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
-    "sha256": "5ce606bbe3e756a1cf38188f879a20d75047ba249dc66ba7002cfe16cb09420f",
-    "size": 24388192,
-    "notes": "FelixServer 1.5.6 mit Inselschlacht 1.1.2.25 und Felix Musik 1.0.0"
+    "sha256": "257ac8adb5f4de7195ad3981cf483763143bbbf5e7208780087766b5838095a8",
+    "size": 24442280,
+    "notes": "Studio 2.6.4: 2,4-GHz-WLAN wird unterstützt (Standard, Samsung, Owner). Felixstore 1.11.0, FelixServer 1.6.0 und FelixAccountManager 2.2.0: neues modernes Design mit mehr Optionen. Felix Creator Upload 1.2.0: Apps direkt vom Handy hochladen und Auto-Update im Hintergrund."
   },
   "store": {
-    "versionCode": 39,
-    "versionName": "1.10.2",
+    "versionCode": 41,
+    "versionName": "1.11.0",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
-    "sha256": "45654eb3661944085ca4f2a5ecc7ed8d856fbb9f8618fc3d3ccfbfb37d1207f6",
-    "size": 7453964
+    "sha256": "9e0b82680f565e0242ea84e9c7c2e3bb152908000188df0fa587f0f94b44c9c1",
+    "size": 7486820
   },
   "server": {
-    "versionCode": 17,
-    "versionName": "1.5.7",
-    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/bc436f0b48118c882eff3e717f38cb9ec3427930/public/apps/felix-server/current.apk",
-    "sha256": "c2fa259b0f6014997f295b2488166c8e50d5208d5b3eba95ef7bbffe4550f926",
-    "size": 6901066
+    "versionCode": 18,
+    "versionName": "1.6.0",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/current.apk",
+    "sha256": "1a1b056f41aaafa443ac1fe87853c5889541d1fbb86338379d559c1b9eb8913c",
+    "size": 6917454
   },
   "accountManager": {
-    "versionCode": 16,
-    "versionName": "2.1.7",
+    "versionCode": 17,
+    "versionName": "2.2.0",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-account-manager/current.apk",
-    "sha256": "2e4d50defaea9412458c0ad7867c0b393f68f4ebd836109429b3464560357f18",
-    "size": 6992000
+    "sha256": "abe1fc638f37a9bb9086491157f876f2292c15befc445a283b5b0bb75948a2fd",
+    "size": 7008427
   },
   "browser": {
     "versionCode": 12,
@@ -56,11 +57,11 @@
     "size": 6794858
   },
   "creatorUpload": {
-    "versionCode": 3,
-    "versionName": "1.1.1",
+    "versionCode": 4,
+    "versionName": "1.2.0",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-creator-upload/current.apk",
-    "sha256": "4f1f32a7bb0aa8a8de80133f4087d925bc5e70bbdc7fcde8f60474ae04e93afa",
-    "size": 6722922
+    "sha256": "d9462aeb4582db8bcee0a8722253d812f7c7a865dcf8261b40394a9ffbddf824",
+    "size": 6755816
   },
   "cloudGallery": {
     "versionCode": 5,
@@ -72,23 +73,23 @@
   "whochat": {
     "versionCode": 2,
     "versionName": "1.0.1",
-    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0281fa124027d445a8f00e933b2ce3bd8e5c4ac0/public/apps/felix-whochat/current.apk",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/current.apk",
     "sha256": "2cdc63ae20c4277efb908829b0db7fbb88dfd9fd1fd28bf6a56ee4173d33589b",
     "size": 6734719
   },
   "music": {
     "versionCode": 3,
     "versionName": "1.0.2",
-    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/ed1eb4f1415dfcda4f85e8e42911b222e92bf56d/public/apps/felix-music/current.apk",
+    "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-music/current.apk",
     "sha256": "c98c760cbdb68008dfbb9751f8ade81b0958af8e8308e2062145b364af1f0bb2",
     "size": 6696915
   },
   "inselschlacht": {
-    "versionCode": 1010225,
-    "versionName": "1.1.2.25",
+    "versionCode": 1010229,
+    "versionName": "1.1.2.29",
     "apkUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/inselschlacht/current.apk",
-    "sha256": "548f5378680f02e94dbb58f4d9b87a4c4dd2bfa6a70edb3cbfd32425c4b8147a",
-    "size": 7401016
+    "sha256": "f6fcd5960bde9358f9f6bc7c43fa6ef89214f1e41b060f3ab3afce7b86012d95",
+    "size": 19043404
   },
   "desktop": {
     "version": "2.6.3",
