@@ -9,7 +9,7 @@
   "packageName": "com.felixonthebeats.whochat",
   "category": "app",
   "genre": "Kommunikation",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-whochat/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0b9b470f6064d24c1079bbf583610721f193f820/public/apps/felix-whochat/current.apk",
   "minAndroid": 23,
   "minRamMb": 1024,
   "nativeAbi": "any",

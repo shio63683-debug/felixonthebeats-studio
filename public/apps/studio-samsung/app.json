@@ -8,7 +8,7 @@
   "platform": "Android · Samsung",
   "packageName": "com.felixonthebeats.studio.samsung",
   "genre": "Tools",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-samsung/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0b9b470f6064d24c1079bbf583610721f193f820/public/apps/studio-samsung/current.apk",
   "apkSize": 24442280,
   "sha256": "257ac8adb5f4de7195ad3981cf483763143bbbf5e7208780087766b5838095a8",
   "versionCode": 37,

@@ -8,7 +8,7 @@
   "platform": "Android",
   "packageName": "com.felixonthebeats.youtube",
   "genre": "Musik & Video",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-youtube/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0b9b470f6064d24c1079bbf583610721f193f820/public/apps/felix-youtube/current.apk",
   "apkSize": 6794858,
   "sha256": "c4980c6ba314a84940f3234fed8da67c4d4ba47e99a6cd7c6847fb998464afcf",
   "versionCode": 9,

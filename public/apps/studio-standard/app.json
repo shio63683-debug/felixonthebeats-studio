@@ -8,7 +8,7 @@
   "platform": "Android",
   "packageName": "com.felixonthebeats.studio",
   "genre": "Tools",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/studio-standard/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0b9b470f6064d24c1079bbf583610721f193f820/public/apps/studio-standard/current.apk",
   "apkSize": 24467196,
   "sha256": "3fca18e8c8386385e589948d5250212f3adeea54447be2aabdbb60a616f49987",
   "versionCode": 37,

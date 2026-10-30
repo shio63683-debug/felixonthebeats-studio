@@ -8,7 +8,7 @@
   "platform": "Android",
   "packageName": "com.felixonthebeats.browser",
   "genre": "Browser",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/flc-web/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0b9b470f6064d24c1079bbf583610721f193f820/public/apps/flc-web/current.apk",
   "apkSize": 7344302,
   "sha256": "17cf525a26056d61b3df519fc7dcffc9173e852ebdfd6bdc67469d1b7e2eae42",
   "versionCode": 12,

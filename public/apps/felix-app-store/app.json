@@ -8,7 +8,7 @@
   "platform": "Android",
   "packageName": "com.felixonthebeats.appstore",
   "genre": "Apps & Spiele",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-app-store/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0b9b470f6064d24c1079bbf583610721f193f820/public/apps/felix-app-store/current.apk",
   "apkSize": 7486820,
   "sha256": "9e0b82680f565e0242ea84e9c7c2e3bb152908000188df0fa587f0f94b44c9c1",
   "versionCode": 41,

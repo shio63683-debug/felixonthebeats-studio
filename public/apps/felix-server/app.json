@@ -9,7 +9,7 @@
   "packageName": "com.felixonthebeats.server",
   "category": "service",
   "genre": "Felix-Dienste",
-  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/main/public/apps/felix-server/current.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/shio63683-debug/felixonthebeats-studio/0b9b470f6064d24c1079bbf583610721f193f820/public/apps/felix-server/current.apk",
   "apkSize": 6917454,
   "sha256": "1a1b056f41aaafa443ac1fe87853c5889541d1fbb86338379d559c1b9eb8913c",
   "versionCode": 18,
